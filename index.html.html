@@ -1,0 +1,2252 @@
+<html lang="ko"><head>
+    <script type="module" src="/@vite/client"></script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtisanHub - 핸드메이드 &amp; 시각 예술가 포트폴리오 및 외주 매칭</title>
+    <meta name="description" content="일러스트레이터, 도예가, 뜨개질/섬유 공예가 등 시각 예술가들을 위한 감성 포트폴리오 및 맞춤 외주 의뢰 매칭 플랫폼">
+    <meta property="og:title" content="ArtisanHub - 핸드메이드 &amp; 시각 예술가 포트폴리오 및 외주 매칭">
+    <meta property="og:description" content="일러스트레이터, 도예가, 뜨개질/섬유 공예가 등 시각 예술가들을 위한 감성 포트폴리오 및 맞춤 외주 의뢰 매칭 플랫폼">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+
+    <!-- Local Compiled Tailwind CSS for instant preview & Standalone CDN for portable execution -->
+    <link rel="stylesheet" href="/src/index.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+              sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'sans-serif'],
+            },
+            colors: {
+              stone: {
+                50: '#FAF9F5',
+                100: '#F5F4EE',
+                200: '#E7E5DD',
+                300: '#D5D2C7',
+                400: '#A8A496',
+                500: '#787467',
+                600: '#57544B',
+                700: '#44413A',
+                800: '#2A2824',
+                900: '#1C1B18',
+                950: '#11100E',
+              }
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+      :root {
+        --font-serif: 'Cormorant Garamond', Georgia, serif;
+        --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+      body {
+        font-family: var(--font-sans);
+        background-color: #FAF9F5;
+        color: #1C1B18;
+        overflow-x: hidden;
+      }
+      h1, h2, h3, .font-display {
+        font-family: var(--font-serif);
+      }
+      /* Custom subtle scrollbar */
+      ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #F5F4EE;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #D5D2C7;
+        border-radius: 9999px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #A8A496;
+      }
+      /* Smooth modal animation */
+      .modal-backdrop {
+        animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      .toast-enter {
+        animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes slideUp {
+        from { transform: translateY(12px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+      }
+    </style>
+  <script src="/_aistudio-iframe.js?v=1f94f900"></script><script src="https://cdn.jsdelivr.net/npm/html2canvas-pro@2.0.4"></script><style>.aistudio-hover-highlight { box-shadow: inset 0 0 0 0.5px white, inset 0 0 0 1.5px rgba(128,128,128,0.6) !important; }.aistudio-active-highlight { outline: 2px solid #87a9ff !important; outline-offset: -2px !important; box-shadow: 0 0 0 0.5px rgba(0,0,0,0.3), inset 0 0 0 0.5px rgba(0,0,0,0.3) !important; }.aistudio-generating-blur { filter: blur(5px) grayscale(100%) brightness(28%) !important; transition: filter 0.3s ease; }#aistudio-focus-mode-tag { position: absolute; display: none; align-items: center; gap: 4px; background: #87a9ff; border-radius: 12px; z-index: 10000; padding: 8px; color: #32302c; font-family: Inter, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; line-height: 21px; pointer-events: none; }#aistudio-hover-mode-tag { position: absolute; display: none; align-items: center; gap: 4px; background: rgba(128,128,128,0.6); border-radius: 12px; z-index: 10000; padding: 8px; color: white; font-family: Inter, sans-serif; font-size: 14px; font-style: normal; font-weight: 500; line-height: 21px; pointer-events: none; }.aistudio-img-icon { display: none; vertical-align: middle; pointer-events: auto; cursor: pointer; }.aistudio-img-icon.visible { display: inline-flex; }#aistudio-focus-mode-tag .aistudio-img-icon { position: relative; width: 26px; height: 26px; background: #32302c; border-radius: 6px; margin: -4px -4px -4px 0; }#aistudio-focus-mode-tag .aistudio-img-icon::before { content: ""; position: absolute; top: 4px; left: 4px; width: 18px; height: 18px; background-color: white; -webkit-mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); mask-size: contain; mask-repeat: no-repeat; }#aistudio-hover-mode-tag .aistudio-img-icon { position: relative; width: 18px; height: 18px; margin-left: 4px; }#aistudio-hover-mode-tag .aistudio-img-icon::before { content: ""; position: absolute; top: 0; left: 0; width: 18px; height: 18px; background-color: white; -webkit-mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); -webkit-mask-size: contain; -webkit-mask-repeat: no-repeat; mask-image: url("https://fonts.gstatic.com/s/i/short-term/release/googlesymbols/edit_fix_auto/default/24px.svg"); mask-size: contain; mask-repeat: no-repeat; }#aistudio-focus-mode-tag .aistudio-img-icon:hover, #aistudio-hover-mode-tag .aistudio-img-icon:hover { background: #424242 !important; }#aistudio-focus-mode-tag .aistudio-img-icon:active, #aistudio-hover-mode-tag .aistudio-img-icon:active { background: #393f51 !important; }</style><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:"Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.pointer-events-none{pointer-events:none}.pointer-events-auto{pointer-events:auto}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.inset-x-0{left:0px;right:0px}.bottom-0{bottom:0px}.bottom-6{bottom:1.5rem}.left-0{left:0px}.right-0{right:0px}.right-6{right:1.5rem}.top-0{top:0px}.right-3{right:0.75rem}.top-3{top:0.75rem}.z-10{z-index:10}.z-20{z-index:20}.z-40{z-index:40}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.mb-1{margin-bottom:0.25rem}.mb-1\.5{margin-bottom:0.375rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-5{margin-bottom:1.25rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-1{margin-right:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-2{margin-top:0.5rem}.mt-3{margin-top:0.75rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.mt-auto{margin-top:auto}.line-clamp-1{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:1}.line-clamp-2{overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.h-0\.5{height:0.125rem}.h-14{height:3.5rem}.h-16{height:4rem}.h-3\.5{height:0.875rem}.h-4{height:1rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-8{height:2rem}.h-80{height:20rem}.h-9{height:2.25rem}.h-full{height:100%}.h-auto{height:auto}.max-h-\[440px\]{max-height:440px}.max-h-\[92vh\]{max-height:92vh}.min-h-screen{min-height:100vh}.w-14{width:3.5rem}.w-16{width:4rem}.w-3\.5{width:0.875rem}.w-4{width:1rem}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-9{width:2.25rem}.w-full{width:100%}.min-w-0{min-width:0px}.max-w-2xl{max-width:42rem}.max-w-4xl{max-width:56rem}.max-w-7xl{max-width:80rem}.max-w-full{max-width:100%}.max-w-md{max-width:28rem}.max-w-sm{max-width:24rem}.max-w-xl{max-width:36rem}.flex-1{flex:1 1 0%}.shrink-0{flex-shrink:0}.scale-110{--tw-scale-x:1.1;--tw-scale-y:1.1;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.resize-none{resize:none}.columns-1{columns:1}.break-inside-avoid{break-inside:avoid}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-end{justify-content:flex-end}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-1{gap:0.25rem}.gap-1\.5{gap:0.375rem}.gap-2{gap:0.5rem}.gap-2\.5{gap:0.625rem}.gap-3{gap:0.75rem}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-x-3{column-gap:0.75rem}.gap-y-2{row-gap:0.5rem}.space-y-12 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(3rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(3rem * var(--tw-space-y-reverse))}.space-y-2\.5 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.625rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.625rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.overflow-y-auto{overflow-y:auto}.truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.whitespace-nowrap{white-space:nowrap}.rounded-2xl{border-radius:1rem}.rounded-3xl{border-radius:1.5rem}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-xl{border-radius:0.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-t{border-top-width:1px}.border-emerald-200{--tw-border-opacity:1;border-color:rgb(167 243 208 / var(--tw-border-opacity, 1))}.border-stone-100{--tw-border-opacity:1;border-color:rgb(245 244 238 / var(--tw-border-opacity, 1))}.border-stone-200{--tw-border-opacity:1;border-color:rgb(231 229 221 / var(--tw-border-opacity, 1))}.border-stone-200\/60{border-color:rgb(231 229 221 / 0.6)}.border-stone-200\/80{border-color:rgb(231 229 221 / 0.8)}.border-stone-200\/90{border-color:rgb(231 229 221 / 0.9)}.border-stone-900{--tw-border-opacity:1;border-color:rgb(28 27 24 / var(--tw-border-opacity, 1))}.border-stone-800{--tw-border-opacity:1;border-color:rgb(42 40 36 / var(--tw-border-opacity, 1))}.bg-\[\#FAF9F5\]{--tw-bg-opacity:1;background-color:rgb(250 249 245 / var(--tw-bg-opacity, 1))}.bg-\[\#FAF9F5\]\/90{background-color:rgb(250 249 245 / 0.9)}.bg-emerald-50{--tw-bg-opacity:1;background-color:rgb(236 253 245 / var(--tw-bg-opacity, 1))}.bg-stone-100{--tw-bg-opacity:1;background-color:rgb(245 244 238 / var(--tw-bg-opacity, 1))}.bg-stone-200{--tw-bg-opacity:1;background-color:rgb(231 229 221 / var(--tw-bg-opacity, 1))}.bg-stone-200\/70{background-color:rgb(231 229 221 / 0.7)}.bg-stone-50{--tw-bg-opacity:1;background-color:rgb(250 249 245 / var(--tw-bg-opacity, 1))}.bg-stone-900{--tw-bg-opacity:1;background-color:rgb(28 27 24 / var(--tw-bg-opacity, 1))}.bg-stone-950\/60{background-color:rgb(17 16 14 / 0.6)}.bg-stone-950\/70{background-color:rgb(17 16 14 / 0.7)}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-white\/50{background-color:rgb(255 255 255 / 0.5)}.bg-white\/70{background-color:rgb(255 255 255 / 0.7)}.bg-rose-500{--tw-bg-opacity:1;background-color:rgb(244 63 94 / var(--tw-bg-opacity, 1))}.bg-stone-900\/80{background-color:rgb(28 27 24 / 0.8)}.bg-stone-950\/20{background-color:rgb(17 16 14 / 0.2)}.bg-white\/80{background-color:rgb(255 255 255 / 0.8)}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-stone-950\/75{--tw-gradient-from:rgb(17 16 14 / 0.75) var(--tw-gradient-from-position);--tw-gradient-to:rgb(17 16 14 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-stone-950\/20{--tw-gradient-to:rgb(17 16 14 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), rgb(17 16 14 / 0.2) var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.fill-amber-700{fill:#b45309}.fill-current{fill:currentColor}.fill-rose-500{fill:#f43f5e}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.object-center{object-position:center}.p-1{padding:0.25rem}.p-1\.5{padding:0.375rem}.p-2{padding:0.5rem}.p-3{padding:0.75rem}.p-3\.5{padding:0.875rem}.p-4{padding:1rem}.p-6{padding:1.5rem}.px-1\.5{padding-left:0.375rem;padding-right:0.375rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-2\.5{padding-left:0.625rem;padding-right:0.625rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-3\.5{padding-left:0.875rem;padding-right:0.875rem}.px-4{padding-left:1rem;padding-right:1rem}.px-5{padding-left:1.25rem;padding-right:1.25rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1\.5{padding-top:0.375rem;padding-bottom:0.375rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-6{padding-top:1.5rem;padding-bottom:1.5rem}.pb-1{padding-bottom:0.25rem}.pb-10{padding-bottom:2.5rem}.pb-2{padding-bottom:0.5rem}.pb-20{padding-bottom:5rem}.pb-4{padding-bottom:1rem}.pb-6{padding-bottom:1.5rem}.pl-3\.5{padding-left:0.875rem}.pr-2{padding-right:0.5rem}.pt-2{padding-top:0.5rem}.pt-3{padding-top:0.75rem}.pt-4{padding-top:1rem}.pt-6{padding-top:1.5rem}.pt-8{padding-top:2rem}.text-left{text-align:left}.text-center{text-align:center}.text-right{text-align:right}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.font-serif{font-family:"Cormorant Garamond", Georgia, serif}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-\[10px\]{font-size:10px}.text-\[11px\]{font-size:11px}.text-base{font-size:1rem;line-height:1.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.tabular-nums{--tw-numeric-spacing:tabular-nums;font-variant-numeric:var(--tw-ordinal) var(--tw-slashed-zero) var(--tw-numeric-figure) var(--tw-numeric-spacing) var(--tw-numeric-fraction)}.leading-\[1\.18\]{line-height:1.18}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-emerald-600{--tw-text-opacity:1;color:rgb(5 150 105 / var(--tw-text-opacity, 1))}.text-emerald-700{--tw-text-opacity:1;color:rgb(4 120 87 / var(--tw-text-opacity, 1))}.text-rose-500{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.text-stone-100{--tw-text-opacity:1;color:rgb(245 244 238 / var(--tw-text-opacity, 1))}.text-stone-300{--tw-text-opacity:1;color:rgb(213 210 199 / var(--tw-text-opacity, 1))}.text-stone-400{--tw-text-opacity:1;color:rgb(168 164 150 / var(--tw-text-opacity, 1))}.text-stone-50{--tw-text-opacity:1;color:rgb(250 249 245 / var(--tw-text-opacity, 1))}.text-stone-500{--tw-text-opacity:1;color:rgb(120 116 103 / var(--tw-text-opacity, 1))}.text-stone-600{--tw-text-opacity:1;color:rgb(87 84 75 / var(--tw-text-opacity, 1))}.text-stone-700{--tw-text-opacity:1;color:rgb(68 65 58 / var(--tw-text-opacity, 1))}.text-stone-800{--tw-text-opacity:1;color:rgb(42 40 36 / var(--tw-text-opacity, 1))}.text-stone-900{--tw-text-opacity:1;color:rgb(28 27 24 / var(--tw-text-opacity, 1))}.text-stone-950{--tw-text-opacity:1;color:rgb(17 16 14 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-emerald-400{--tw-text-opacity:1;color:rgb(52 211 153 / var(--tw-text-opacity, 1))}.underline{-webkit-text-decoration-line:underline;text-decoration-line:underline}.decoration-stone-300{-webkit-text-decoration-color:#D5D2C7;text-decoration-color:#D5D2C7}.underline-offset-4{text-underline-offset:4px}.opacity-0{opacity:0}.shadow-2xl{--tw-shadow:0 25px 50px -12px rgb(0 0 0 / 0.25);--tw-shadow-colored:0 25px 50px -12px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-lg{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.backdrop-blur-sm{--tw-backdrop-blur:blur(4px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-700{transition-duration:700ms}.duration-300{transition-duration:300ms}.duration-500{transition-duration:500ms}.ease-out{transition-timing-function:cubic-bezier(0, 0, 0.2, 1)}.selection\:bg-stone-900 *::selection{--tw-bg-opacity:1;background-color:rgb(28 27 24 / var(--tw-bg-opacity, 1))}.selection\:text-white *::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.selection\:bg-stone-900::selection{--tw-bg-opacity:1;background-color:rgb(28 27 24 / var(--tw-bg-opacity, 1))}.selection\:text-white::selection{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.placeholder\:text-stone-400::placeholder{--tw-text-opacity:1;color:rgb(168 164 150 / var(--tw-text-opacity, 1))}.focus-within\:ring-2:focus-within{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus-within\:ring-stone-900:focus-within{--tw-ring-opacity:1;--tw-ring-color:rgb(28 27 24 / var(--tw-ring-opacity, 1))}.hover\:bg-stone-100:hover{--tw-bg-opacity:1;background-color:rgb(245 244 238 / var(--tw-bg-opacity, 1))}.hover\:bg-stone-200:hover{--tw-bg-opacity:1;background-color:rgb(231 229 221 / var(--tw-bg-opacity, 1))}.hover\:bg-stone-800:hover{--tw-bg-opacity:1;background-color:rgb(42 40 36 / var(--tw-bg-opacity, 1))}.hover\:bg-stone-900:hover{--tw-bg-opacity:1;background-color:rgb(28 27 24 / var(--tw-bg-opacity, 1))}.hover\:bg-white:hover{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.hover\:text-stone-700:hover{--tw-text-opacity:1;color:rgb(68 65 58 / var(--tw-text-opacity, 1))}.hover\:text-stone-900:hover{--tw-text-opacity:1;color:rgb(28 27 24 / var(--tw-text-opacity, 1))}.hover\:text-stone-950:hover{--tw-text-opacity:1;color:rgb(17 16 14 / var(--tw-text-opacity, 1))}.hover\:text-rose-500:hover{--tw-text-opacity:1;color:rgb(244 63 94 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:bg-white:focus{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-stone-900:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(28 27 24 / var(--tw-ring-opacity, 1))}.focus-visible\:outline-none:focus-visible{outline:2px solid transparent;outline-offset:2px}.active\:scale-90:active{--tw-scale-x:.9;--tw-scale-y:.9;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-amber-900{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-100{opacity:1}@media (min-width: 640px){.sm\:flex{display:flex}.sm\:h-20{height:5rem}.sm\:h-96{height:24rem}.sm\:w-20{width:5rem}.sm\:w-auto{width:auto}.sm\:columns-2{columns:2}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.sm\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.sm\:flex-row{flex-direction:row}.sm\:items-end{align-items:flex-end}.sm\:items-center{align-items:center}.sm\:justify-end{justify-content:flex-end}.sm\:gap-3{gap:0.75rem}.sm\:p-6{padding:1.5rem}.sm\:p-8{padding:2rem}.sm\:px-6{padding-left:1.5rem;padding-right:1.5rem}.sm\:pb-14{padding-bottom:3.5rem}.sm\:pt-12{padding-top:3rem}.sm\:text-2xl{font-size:1.5rem;line-height:2rem}.sm\:text-3xl{font-size:1.875rem;line-height:2.25rem}.sm\:text-4xl{font-size:2.25rem;line-height:2.5rem}.sm\:text-base{font-size:1rem;line-height:1.5rem}.sm\:text-lg{font-size:1.125rem;line-height:1.75rem}.sm\:text-sm{font-size:0.875rem;line-height:1.25rem}}@media (min-width: 768px){.md\:flex{display:flex}.md\:hidden{display:none}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-start{align-items:flex-start}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:columns-3{columns:3}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:gap-12{gap:3rem}.lg\:px-8{padding-left:2rem;padding-right:2rem}}@media (min-width: 1280px){.xl\:columns-4{columns:4}}</style></head>
+  <body class="min-h-screen bg-[#FAF9F5] text-stone-900 flex flex-col selection:bg-stone-900 selection:text-white" data-new-gr-c-s-check-loaded="14.1342.0" data-gr-ext-installed="">
+
+    <!-- Top Navigation (Top Bar Contract: 3 Zones) -->
+    <header class="sticky top-0 z-40 bg-[#FAF9F5]/90 backdrop-blur-md border-b border-stone-200/80 transition-all">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 flex items-center justify-between gap-8">
+        
+        <!-- Zone 1: Brand Wordmark -->
+        <button onclick="switchTab('feed')" class="flex items-center gap-2.5 text-left group transition-transform focus-visible:outline-none rounded-lg p-1">
+          <div class="w-9 h-9 rounded-xl bg-stone-900 text-stone-100 flex items-center justify-center font-serif text-xl font-bold shadow-sm transition-transform group-hover:scale-105">
+            A
+          </div>
+          <div class="flex flex-col">
+            <span class="font-serif text-2xl font-bold tracking-tight text-stone-900 leading-none">
+              ArtisanHub
+            </span>
+            <span class="text-[10px] tracking-widest text-stone-500 uppercase mt-0.5">
+              Visual Craft &amp; Commission
+            </span>
+          </div>
+        </button>
+
+        <!-- Zone 2: Navigation Links -->
+        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-stone-600">
+          <button id="nav-feed" onclick="switchTab('feed')" class="transition-colors whitespace-nowrap cursor-pointer pb-1 relative text-stone-950 font-semibold">
+            작품 구경
+            <span id="nav-indicator-feed" class="absolute bottom-0 left-0 right-0 h-0.5 bg-stone-900 rounded-full"></span>
+          </button>
+
+          <button id="nav-artists" onclick="switchTab('artists')" class="transition-colors whitespace-nowrap cursor-pointer pb-1 relative hover:text-stone-900">
+            아티스트 찾기
+            <span id="nav-indicator-artists" class="hidden absolute bottom-0 left-0 right-0 h-0.5 bg-stone-900 rounded-full"></span>
+          </button>
+
+          <button id="nav-guide" onclick="switchTab('guide')" class="transition-colors whitespace-nowrap cursor-pointer pb-1 relative hover:text-stone-900">
+            외주 의뢰 가이드
+            <span id="nav-indicator-guide" class="hidden absolute bottom-0 left-0 right-0 h-0.5 bg-stone-900 rounded-full"></span>
+          </button>
+
+          <button id="nav-bookmarks" onclick="switchTab('bookmarks')" class="transition-colors whitespace-nowrap cursor-pointer flex items-center gap-1.5 pb-1 relative hover:text-stone-900">
+            <svg class="w-3.5 h-3.5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+            <span>보관함</span>
+            <span id="badge-bookmarks-count" class="text-xs bg-stone-200 text-stone-800 rounded-full px-1.5 py-0.2 font-mono">2</span>
+            <span id="nav-indicator-bookmarks" class="hidden absolute bottom-0 left-0 right-0 h-0.5 bg-stone-900 rounded-full"></span>
+          </button>
+        </nav>
+
+        <!-- Zone 3: Actions -->
+        <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+          <button onclick="downloadSingleFile()" title="단일 HTML 파일 저장" class="hidden sm:flex items-center gap-1.5 px-3 py-2 text-xs font-medium text-stone-700 bg-stone-100 hover:bg-stone-200 rounded-xl transition-colors cursor-pointer border border-stone-200">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+            <span>HTML 다운로드</span>
+          </button>
+
+          <button onclick="openRegisterModal()" class="flex items-center gap-1.5 px-4 py-2.5 text-xs sm:text-sm font-semibold text-stone-50 bg-stone-900 rounded-xl hover:bg-stone-800 active:scale-98 transition-all shadow-sm cursor-pointer whitespace-nowrap">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path></svg>
+            <span>포트폴리오 등록</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Sub-nav -->
+      <div class="md:hidden flex items-center justify-around border-t border-stone-200/60 px-2 py-2 text-xs font-medium text-stone-600 bg-[#FAF9F5]">
+        <button onclick="switchTab('feed')" id="mobile-nav-feed" class="px-2.5 py-1.5 rounded-lg bg-stone-200 text-stone-900 font-semibold">작품 구경</button>
+        <button onclick="switchTab('artists')" id="mobile-nav-artists" class="px-2.5 py-1.5 rounded-lg">아티스트</button>
+        <button onclick="switchTab('guide')" id="mobile-nav-guide" class="px-2.5 py-1.5 rounded-lg">외주 가이드</button>
+        <button onclick="switchTab('bookmarks')" id="mobile-nav-bookmarks" class="px-2.5 py-1.5 rounded-lg">보관함 <span id="mobile-badge-count" class="font-mono text-[10px]">(2)</span></button>
+      </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+
+      <!-- Hero Section -->
+      <section id="hero-section" class="relative pt-8 pb-10 sm:pt-12 sm:pb-14 overflow-hidden">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          
+          <!-- Left Column -->
+          <div class="lg:col-span-7 flex flex-col justify-center">
+            <div class="flex items-center gap-2 text-xs text-stone-500 font-medium mb-3 tracking-wider uppercase">
+              <span>Handcrafted Art &amp; Commission Collective</span>
+              <span aria-hidden="true">·</span>
+              <span>Seoul &amp; Beyond</span>
+            </div>
+
+            <!-- Main Headline -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-stone-900 tracking-tight leading-[1.18] mb-4">
+              핸드메이드 &amp; 비주얼 아티스트를 위한 <span class="italic font-normal text-stone-700">스페이스</span>
+            </h1>
+
+            <p class="text-base sm:text-lg text-stone-600 leading-relaxed max-w-2xl mb-8">
+              도예가의 물레 위 온기부터 섬유 공예가의 촉각적인 위빙, 일러스트레이터의 서정적인 붓 터치까지.
+              세상에 단 하나뿐인 시각 예술가들의 포트폴리오를 둘러보고 나만의 맞춤 외주를 1:1로 의뢰해보세요.
+            </p>
+
+            <!-- Search Box -->
+            <div class="relative max-w-xl mb-5">
+              <div class="flex items-center bg-white rounded-2xl border border-stone-200 shadow-xs p-1.5 focus-within:ring-2 focus-within:ring-stone-900 transition-all">
+                <div class="pl-3.5 pr-2 text-stone-400">
+                  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <input id="search-input" type="text" oninput="handleSearch(this.value)" placeholder="작가명, 도자기, 일러스트, 태피스트리, 북커버 검색..." class="w-full py-2.5 text-sm text-stone-900 placeholder:text-stone-400 bg-transparent focus:outline-none">
+                <button id="search-clear-btn" onclick="clearSearch()" class="hidden p-1.5 text-stone-400 hover:text-stone-700 rounded-lg hover:bg-stone-100 transition-colors mr-1 cursor-pointer">
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+                <button type="button" class="px-4 py-2.5 bg-stone-900 text-stone-100 rounded-xl text-xs font-semibold hover:bg-stone-800 transition-colors shrink-0">
+                  검색
+                </button>
+              </div>
+            </div>
+
+            <!-- Keyword Tags -->
+            <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs text-stone-500">
+              <span class="font-medium text-stone-700">인기 키워드:</span>
+              <button onclick="applyKeywordSearch('달항아리')" class="hover:text-stone-900 underline underline-offset-4 decoration-stone-300 transition-colors cursor-pointer">#달항아리</button>
+              <span aria-hidden="true" class="text-stone-300">·</span>
+              <button onclick="applyKeywordSearch('태피스트리')" class="hover:text-stone-900 underline underline-offset-4 decoration-stone-300 transition-colors cursor-pointer">#위빙공예</button>
+              <span aria-hidden="true" class="text-stone-300">·</span>
+              <button onclick="applyKeywordSearch('북커버')" class="hover:text-stone-900 underline underline-offset-4 decoration-stone-300 transition-colors cursor-pointer">#도서표지외주</button>
+              <span aria-hidden="true" class="text-stone-300">·</span>
+              <button onclick="applyKeywordSearch('식기')" class="hover:text-stone-900 underline underline-offset-4 decoration-stone-300 transition-colors cursor-pointer">#카페테이블웨어</button>
+            </div>
+          </div>
+
+          <!-- Right Column: Visual Frame -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-2xl overflow-hidden shadow-lg border border-stone-200/90 bg-stone-100 group">
+              <img src="/src/assets/images/hero_artisan_studio_1793238753889.jpg" alt="Artisan Studio Workshop" onerror="this.src='https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&amp;auto=format&amp;fit=crop&amp;q=80'" class="w-full h-80 sm:h-96 object-cover object-center group-hover:scale-102 transition-transform duration-700 ease-out">
+              <div class="absolute inset-0 bg-gradient-to-t from-stone-950/75 via-stone-950/20 to-transparent flex flex-col justify-end p-6 text-stone-100">
+                <span class="text-xs uppercase tracking-wider text-stone-300">Featured Atelier</span>
+                <p class="font-serif text-lg font-bold text-white mt-1">도예가 한서윤의 이천 아틀리에</p>
+                <div class="flex items-center gap-2 text-xs text-stone-300 mt-1">
+                  <span>물레 성형 &amp; 백자 오브제</span>
+                  <span aria-hidden="true">·</span>
+                  <span>외주 의뢰 접수 중</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Metric Counter Strip -->
+        <div class="mt-12 pt-6 border-t border-stone-200/80 grid grid-cols-2 md:grid-cols-4 gap-6 text-stone-800">
+          <div>
+            <div class="font-mono text-2xl font-bold tracking-tight text-stone-900 tabular-nums">420+</div>
+            <div class="text-xs text-stone-500 mt-0.5">엄선된 전문 아티스트</div>
+          </div>
+          <div>
+            <div class="font-mono text-2xl font-bold tracking-tight text-stone-900 tabular-nums">1,850+</div>
+            <div class="text-xs text-stone-500 mt-0.5">외주 매칭 및 제작 완료</div>
+          </div>
+          <div>
+            <div class="font-mono text-2xl font-bold tracking-tight text-stone-900 tabular-nums">99.4%</div>
+            <div class="text-xs text-stone-500 mt-0.5">의뢰 고객 만족도</div>
+          </div>
+          <div>
+            <div class="font-mono text-2xl font-bold tracking-tight text-stone-900 tabular-nums">100%</div>
+            <div class="text-xs text-stone-500 mt-0.5">안심 에스크로 결제 보호</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- View 1: Feed (Artwork Gallery & Bookmarks) -->
+      <section id="view-feed" class="space-y-6">
+        
+        <!-- Bookmarks Header (Hidden by default) -->
+        <div id="bookmarks-header" class="hidden py-6 border-b border-stone-200/80 flex items-center justify-between">
+          <div>
+            <div class="flex items-center gap-2 text-xs text-stone-500 font-medium">
+              <svg class="w-4 h-4 text-amber-700 fill-amber-700" viewBox="0 0 24 24"><path d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"></path></svg>
+              <span>나의 큐레이션 보관함</span>
+            </div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-1">관심 있는 예술 작품 모음</h2>
+          </div>
+          <button onclick="switchTab('feed')" class="text-xs font-semibold text-stone-600 hover:text-stone-900 underline underline-offset-4 cursor-pointer">
+            전체 작품 구경하러 가기
+          </button>
+        </div>
+
+        <!-- Category Filter & Sort Bar -->
+        <div class="py-4 border-b border-stone-200/80">
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+            
+            <!-- Category Segmented Buttons -->
+            <div class="flex items-center gap-1.5 p-1 bg-stone-200/70 rounded-xl overflow-x-auto max-w-full">
+              <button onclick="setCategory('all')" id="cat-btn-all" class="px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer bg-stone-900 text-stone-50 shadow-xs">전체</button>
+              <button onclick="setCategory('illustration')" id="cat-btn-illustration" class="px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer text-stone-700 hover:text-stone-950">일러스트</button>
+              <button onclick="setCategory('ceramics')" id="cat-btn-ceramics" class="px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer text-stone-700 hover:text-stone-950">도자기</button>
+              <button onclick="setCategory('knitting')" id="cat-btn-knitting" class="px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer text-stone-700 hover:text-stone-950">뜨개질/공예</button>
+              <button onclick="setCategory('3d_craft')" id="cat-btn-3d_craft" class="px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer text-stone-700 hover:text-stone-950">3D/기타</button>
+            </div>
+
+            <!-- Sort Controls -->
+            <div class="flex items-center justify-between sm:justify-end w-full sm:w-auto gap-4 text-xs text-stone-500">
+              <div>
+                총 <span id="artworks-count" class="font-mono font-semibold text-stone-900 tabular-nums">8</span>개 작품
+              </div>
+              <div class="flex items-center gap-1.5 bg-white border border-stone-200 rounded-lg px-2.5 py-1.5 shadow-2xs">
+                <svg class="w-3.5 h-3.5 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4"></path></svg>
+                <select id="sort-select" onchange="handleSortChange(this.value)" class="bg-transparent text-stone-800 text-xs font-medium focus:outline-none cursor-pointer">
+                  <option value="popular">인기순 (좋아요)</option>
+                  <option value="latest">최신순</option>
+                  <option value="price">최저 견적순</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pinterest Masonry Grid Container -->
+        <div id="artworks-grid" class="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
+            <div onclick="openArtistModalByArtwork('art-8')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/hero_artisan_studio_1793238753889.jpg" alt="아티산 공방의 온기 - 도예 &amp; 페인팅 스튜디오" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-8', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-rose-500 text-white shadow-md" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>도자기</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">공간 브랜딩 / 쇼룸 세라믹 디렉팅</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  아티산 공방의 온기 - 도예 &amp; 페인팅 스튜디오
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="한서윤" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">한서윤</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@studio_yoon</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩500,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 fill-rose-500 text-rose-500 scale-110" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      512
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-8', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-3')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_editorial_illustration_1793238755336.jpg" alt="달밤 목련 그늘 아래의 고요한 독서" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-3', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-rose-500 text-white shadow-md" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform fill-current" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>일러스트</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">단행본 북커버 / 에세이 삽화</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  달밤 목련 그늘 아래의 고요한 독서
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="김해솔" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">김해솔</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@haesol_illust</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩150,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 fill-rose-500 text-rose-500 scale-110" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      421
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-3', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-6')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_botanical_book_1793238773759.jpg" alt="야생 약초학 식물도감 컬렉션" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-6', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>일러스트</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">티 브랜드 패키지 / 내추럴 브랜딩</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  야생 약초학 식물도감 컬렉션
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="정은우" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">정은우</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@herbarium_atelier</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩180,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      334
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-6', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-2')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_moon_jar_1793238773073.jpg" alt="백자 달항아리 (Moon Jar No. 04)" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-2', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>도자기</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">갤러리 / 하이엔드 인테리어 오브제</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  백자 달항아리 (Moon Jar No. 04)
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="한서윤" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">한서윤</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@studio_yoon</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩320,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      312
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-2', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-5')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_knit_tapestry_1793238755726.jpg" alt="오가닉 세이지 울 위빙 태피스트리" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-5', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>뜨개질/공예</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">벽걸이 인테리어 / 쇼룸 디스플레이</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  오가닉 세이지 울 위빙 태피스트리
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="민지유" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">민지유</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@knot_and_grain</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩180,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      275
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-5', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-1')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_whimsical_3d_1793238756233.jpg" alt="포레스트 글라스 테라리움 속 요정들" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-1', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>3D/기타</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">브랜드 마스코트 / 캐릭터 외주</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  포레스트 글라스 테라리움 속 요정들
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="루카스 림" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">루카스 림</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@lucas_clayverse</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩200,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      248
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-1', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-7')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_crochet_creatures_1793238774369.jpg" alt="웜 아틀리에 핸드메이드 니트 &amp; 크로셰 친구들" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-7', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>뜨개질/공예</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">유아동 브랜드 화보 / 커스텀 제작 선물</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  웜 아틀리에 핸드메이드 니트 &amp; 크로셰 친구들
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="민지유" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">민지유</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@knot_and_grain</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩95,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      198
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-7', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div onclick="openArtistModalByArtwork('art-4')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="/src/assets/images/art_ceramic_vase_1793238754343.jpg" alt="내추럴 스페클 크림 화병과 들꽃" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out">
+                <button onclick="toggleLike('art-4', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform " fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>도자기</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">개인 소장 / 카페 테이블웨어</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  내추럴 스페클 크림 화병과 들꽃
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&amp;auto=format&amp;fit=crop&amp;q=80" alt="한서윤" class="w-6 h-6 rounded-full object-cover border border-stone-200">
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">한서윤</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">@studio_yoon</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩120,000~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 text-stone-400" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      189
+                    </span>
+                    <button onclick="requestCommissionByArtwork('art-4', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        <!-- Empty State Container -->
+        <div id="empty-state" class="hidden py-20 text-center">
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-stone-100 text-stone-400 mb-4 border border-stone-200">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold text-stone-800 mb-2">조건에 일치하는 작품이 없습니다</h3>
+          <p class="text-sm text-stone-500 max-w-md mx-auto">
+            다른 키워드로 검색하거나 카테고리 필터를 변경해 다양한 핸드메이드 작품들을 찾아보세요.
+          </p>
+        </div>
+      </section>
+
+      <!-- View 2: Artists Directory -->
+      <section id="view-artists" class="hidden py-4 space-y-6">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pb-4 border-b border-stone-200">
+          <div>
+            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900">아티스트 디렉토리</h2>
+            <p class="text-xs sm:text-sm text-stone-500 mt-1">
+              활동 중인 핸드메이드 도예가, 일러스트레이터, 섬유 공예가들의 프로필을 살펴보고 직접 소통하세요.
+            </p>
+          </div>
+          <div class="text-xs text-stone-500">
+            등록 아티스트 <span id="artists-total-count" class="font-mono font-semibold text-stone-900">5</span>명
+          </div>
+        </div>
+
+        <div id="artists-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+      <!-- View 3: Commission Guide & Estimator -->
+      <section id="view-guide" class="hidden py-6 space-y-12">
+        <div class="text-center max-w-2xl mx-auto">
+          <div class="flex items-center justify-center gap-2 text-xs text-stone-500 font-medium tracking-wider uppercase mb-2">
+            <span>Safe &amp; Transparent Matching</span>
+            <span aria-hidden="true">·</span>
+            <span>ArtisanHub Escrow</span>
+          </div>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight mb-3">
+            아티스트 1:1 외주 제작 의뢰 안내
+          </h2>
+          <p class="text-sm sm:text-base text-stone-600 leading-relaxed">
+            어렵고 막막했던 예술 작품 외주를 안심 에스크로 결제와 1:1 전담 매칭으로 투명하게 진행해 드립니다.
+          </p>
+        </div>
+
+        <!-- 4 Steps -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+          <div class="bg-white p-6 rounded-2xl border border-stone-200/90 relative flex flex-col justify-between shadow-2xs">
+            <div>
+              <div class="font-mono text-xs font-bold text-stone-400 mb-3">STEP 01</div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 mb-2">포트폴리오 탐색 &amp; 견적 문의</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                원하는 분위기의 작가를 선택한 뒤 [의뢰하기] 양식을 통해 크기, 용도, 마감 일정을 전달합니다.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500 flex items-center gap-1.5">
+              <span>무료 1:1 견적 상담</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-stone-200/90 relative flex flex-col justify-between shadow-2xs">
+            <div>
+              <div class="font-mono text-xs font-bold text-stone-400 mb-3">STEP 02</div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 mb-2">시안 협의 및 계약 확정</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                작가와 채팅을 통해 러프 스케치 및 흙/원사 재료를 상의하고 제작 세부 일정을 상호 합의합니다.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500 flex items-center gap-1.5">
+              <span>맞춤형 1:1 조율</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-stone-200/90 relative flex flex-col justify-between shadow-2xs">
+            <div>
+              <div class="font-mono text-xs font-bold text-stone-400 mb-3">STEP 03</div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 mb-2">에스크로 안심 결제 &amp; 제작</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                결제 대금은 플랫폼에 안전하게 예치되며, 작업 중 제작 과정을 사진으로 공유받습니다.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500 flex items-center gap-1.5">
+              <span class="text-emerald-700 font-medium">대금 100% 안전 보관</span>
+            </div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-stone-200/90 relative flex flex-col justify-between shadow-2xs">
+            <div>
+              <div class="font-mono text-xs font-bold text-stone-400 mb-3">STEP 04</div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 mb-2">완충 패키징 배송 &amp; 검수</h4>
+              <p class="text-xs text-stone-600 leading-relaxed">
+                파손 없는 프리미엄 목재/완충 패키징으로 배송되며, 수령 후 구매 확정 시 작가에게 정산됩니다.
+              </p>
+            </div>
+            <div class="mt-4 pt-3 border-t border-stone-100 text-[11px] text-stone-500 flex items-center gap-1.5">
+              <span>파손 보상 안심 배송</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Estimate Calculator -->
+        <div class="bg-white rounded-3xl border border-stone-200/90 p-6 sm:p-8 shadow-sm">
+          <div class="flex items-center gap-2.5 mb-2">
+            <svg class="w-5 h-5 text-stone-800" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+            <h3 class="font-serif text-2xl font-bold text-stone-900">실시간 외주 견적 시뮬레이터</h3>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-500 mb-8">
+            원하시는 분야와 용도를 선택하시면 대략적인 시장 적정 견적과 추천 아티스트를 바로 확인할 수 있습니다.
+          </p>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            <div class="lg:col-span-7 space-y-6">
+              <!-- Genre -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">1. 창작 분야</label>
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-2">
+                  <button type="button" onclick="setCalc('category', 'illustration', this)" class="calc-cat-btn py-2 px-3 text-xs font-medium rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100">일러스트</button>
+                  <button type="button" onclick="setCalc('category', 'ceramics', this)" class="calc-cat-btn py-2 px-3 text-xs font-medium rounded-xl border bg-stone-900 text-stone-50 border-stone-900">도자기</button>
+                  <button type="button" onclick="setCalc('category', 'knitting', this)" class="calc-cat-btn py-2 px-3 text-xs font-medium rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100">뜨개질/공예</button>
+                  <button type="button" onclick="setCalc('category', '3d_craft', this)" class="calc-cat-btn py-2 px-3 text-xs font-medium rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100">3D/기타</button>
+                </div>
+              </div>
+
+              <!-- Usage -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">2. 사용 목적</label>
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                  <button type="button" onclick="setCalc('usage', 'personal', this)" class="calc-usage-btn p-3 text-left rounded-xl border bg-stone-900 text-stone-50 border-stone-900">
+                    <div class="text-xs font-bold">개인 소장용</div>
+                    <div class="text-[10px] text-stone-300 mt-0.5">간직용, 1인 선물</div>
+                  </button>
+                  <button type="button" onclick="setCalc('usage', 'commercial', this)" class="calc-usage-btn p-3 text-left rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100">
+                    <div class="text-xs font-bold">상업적 라이선스</div>
+                    <div class="text-[10px] text-stone-400 mt-0.5">표지, 굿즈, 브랜드</div>
+                  </button>
+                  <button type="button" onclick="setCalc('usage', 'space', this)" class="calc-usage-btn p-3 text-left rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100">
+                    <div class="text-xs font-bold">공간 인테리어</div>
+                    <div class="text-[10px] text-stone-400 mt-0.5">카페, 쇼룸 비치용</div>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Speed -->
+              <div>
+                <label class="block text-xs font-semibold uppercase tracking-wider text-stone-600 mb-2">3. 희망 제작 일정</label>
+                <div class="grid grid-cols-2 gap-2">
+                  <button type="button" onclick="setCalc('speed', 'normal', this)" class="calc-speed-btn p-3 text-left rounded-xl border bg-stone-900 text-stone-50 border-stone-900">
+                    <div class="text-xs font-bold">일반 제작 (7~14일)</div>
+                    <div class="text-[10px] text-stone-300 mt-0.5">표준 일정</div>
+                  </button>
+                  <button type="button" onclick="setCalc('speed', 'express', this)" class="calc-speed-btn p-3 text-left rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100">
+                    <div class="text-xs font-bold">급행 제작 (5~7일 이내)</div>
+                    <div class="text-[10px] text-stone-400 mt-0.5">긴급 조율 할증</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Result Box -->
+            <div class="lg:col-span-5 bg-stone-50 rounded-2xl border border-stone-200/90 p-6 flex flex-col justify-between">
+              <div>
+                <span class="text-xs text-stone-500 block mb-1">예상 외주 견적 범위</span>
+                <div id="calc-result-price" class="font-mono text-3xl font-bold text-stone-900 tabular-nums">
+                  ₩120,000 ~ ₩320,000
+                </div>
+                <p class="text-xs text-stone-500 mt-2">
+                  * 상세 크기, 디테일 수준, 수정 횟수에 따라 작가와의 1:1 상담 후 정확한 확정 견적이 안내됩니다.
+                </p>
+
+                <!-- Matched Artists -->
+                <div class="mt-6 pt-4 border-t border-stone-200">
+                  <span class="text-xs font-semibold text-stone-700 block mb-3">이 분야 추천 아티스트:</span>
+                  <div id="calc-matched-artists" class="space-y-2.5">
+                    <!-- Populated dynamically -->
+                  </div>
+                </div>
+              </div>
+
+              <div class="mt-6 text-[11px] text-stone-400 flex items-center gap-1.5">
+                <svg class="w-3.5 h-3.5 text-stone-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <span>에스크로 보호 / 작가 100% 신원 검증 완료</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Minimalist Footer -->
+    <footer class="border-t border-stone-200 bg-white/50 py-12 text-xs text-stone-500">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col items-center md:items-start">
+          <div class="font-serif text-lg font-bold text-stone-900">ArtisanHub</div>
+          <p class="text-stone-500 mt-1">핸드메이드 &amp; 시각 예술가들을 위한 포트폴리오 및 1:1 맞춤 외주 매칭 플랫폼</p>
+        </div>
+
+        <div class="flex items-center gap-6 text-stone-600">
+          <button onclick="switchTab('feed')" class="hover:text-stone-950 transition-colors cursor-pointer">작품 갤러리</button>
+          <button onclick="switchTab('artists')" class="hover:text-stone-950 transition-colors cursor-pointer">등록 아티스트</button>
+          <button onclick="switchTab('guide')" class="hover:text-stone-950 transition-colors cursor-pointer">안심 에스크로 외주 가이드</button>
+          <button onclick="openRegisterModal()" class="hover:text-stone-950 transition-colors cursor-pointer font-medium text-stone-900">작가 입점 신청</button>
+        </div>
+
+        <div class="text-stone-400 font-mono text-[11px]">
+          © 2026 ArtisanHub. All rights reserved.
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL 1: Artist Profile & 1:1 Commission Modal -->
+    <div id="modal-artist-profile" class="hidden fixed inset-0 z-50 overflow-y-auto bg-stone-950/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 transition-opacity">
+      <div class="relative w-full max-w-4xl bg-[#FAF9F5] rounded-3xl border border-stone-200/90 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col" onclick="event.stopPropagation()">
+        
+        <!-- Modal Top Bar -->
+        <div class="flex items-center justify-between px-6 py-4 border-b border-stone-200/80 bg-white/70 backdrop-blur-sm sticky top-0 z-20">
+          <div id="modal-artist-meta" class="flex items-center gap-2 text-xs text-stone-500 font-medium">
+            <!-- Artist Category & Location -->
+          </div>
+          <button onclick="closeArtistModal()" class="p-2 text-stone-400 hover:text-stone-900 rounded-full hover:bg-stone-100 transition-colors cursor-pointer" aria-label="닫기">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="overflow-y-auto flex-1 p-6 sm:p-8 space-y-8">
+          
+          <!-- Artist Bio Header -->
+          <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 pb-6 border-b border-stone-200/80">
+            <div class="flex items-start gap-4">
+              <img id="modal-artist-avatar" src="" alt="" class="w-16 h-16 sm:w-20 sm:h-20 rounded-2xl object-cover border border-stone-200 shadow-xs">
+              <div>
+                <div class="flex items-center gap-2">
+                  <h2 id="modal-artist-name" class="font-serif text-2xl sm:text-3xl font-bold text-stone-900"></h2>
+                  <span id="modal-artist-handle" class="text-xs font-mono text-stone-400"></span>
+                </div>
+                <div class="flex items-center gap-3 text-xs text-stone-500 mt-1">
+                  <span id="modal-artist-location" class="flex items-center gap-1"></span>
+                  <span aria-hidden="true">·</span>
+                  <span id="modal-artist-rating" class="flex items-center gap-1 font-mono text-stone-700"></span>
+                </div>
+                <p id="modal-artist-bio" class="text-xs text-stone-600 mt-2 max-w-xl leading-relaxed"></p>
+                <div id="modal-artist-experience" class="text-[11px] text-stone-400 mt-1"></div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:items-end gap-2 w-full sm:w-auto shrink-0">
+              <div class="text-right">
+                <span class="text-[11px] text-stone-400 block">평균 제작 소요기간</span>
+                <span id="modal-artist-turnaround" class="font-mono text-sm font-semibold text-stone-900"></span>
+              </div>
+              <div class="text-right">
+                <span class="text-[11px] text-stone-400 block">최소 의뢰비용</span>
+                <span id="modal-artist-minprice" class="font-mono text-sm font-bold text-stone-900"></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Modal Tabs -->
+          <div class="flex items-center gap-2 border-b border-stone-200/80 pb-2">
+            <button id="modal-tab-gallery-btn" onclick="switchModalTab('gallery')" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-stone-900 text-stone-50 cursor-pointer">
+              대표 작업물 갤러리
+            </button>
+            <button id="modal-tab-pricing-btn" onclick="switchModalTab('pricing')" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer">
+              견적 안내 &amp; 옵션
+            </button>
+            <button id="modal-tab-inquiry-btn" onclick="switchModalTab('inquiry')" class="px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer flex items-center gap-1.5">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+              <span>1:1 외주 견적 문의</span>
+            </button>
+          </div>
+
+          <!-- Tab Content: Gallery -->
+          <div id="modal-tab-gallery" class="space-y-6">
+            <div class="relative rounded-2xl overflow-hidden bg-stone-100 border border-stone-200 shadow-xs max-h-[440px] flex items-center justify-center">
+              <img id="modal-gallery-main-img" src="" alt="Main Artwork" class="w-full h-full max-h-[440px] object-contain">
+              <div class="absolute bottom-0 inset-x-0 bg-stone-950/70 backdrop-blur-xs p-4 text-stone-100 flex items-center justify-between">
+                <div>
+                  <h4 id="modal-gallery-main-title" class="font-serif text-lg font-bold"></h4>
+                  <p id="modal-gallery-main-sub" class="text-xs text-stone-300"></p>
+                </div>
+                <button onclick="switchModalTab('inquiry')" class="px-4 py-2 bg-white text-stone-900 text-xs font-semibold rounded-xl hover:bg-stone-100 transition-colors cursor-pointer">
+                  이 스타일로 의뢰하기
+                </button>
+              </div>
+            </div>
+
+            <!-- Gallery Thumbnails -->
+            <div id="modal-gallery-thumbs" class="flex items-center gap-3 overflow-x-auto pb-2">
+              <!-- Populated dynamically -->
+            </div>
+
+            <div id="modal-tags-container" class="flex flex-wrap items-center gap-2 pt-2">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Tab Content: Pricing Guide -->
+          <div id="modal-tab-pricing" class="hidden space-y-4">
+            <div class="text-xs text-stone-500 mb-2">
+              * 안내된 견적은 기본 표준 단가이며, 프로젝트 크기, 디테일, 상업적 사용 범위에 따라 최종 견적이 협의됩니다.
+            </div>
+            <div id="modal-pricing-grid" class="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <!-- Populated dynamically -->
+            </div>
+          </div>
+
+          <!-- Tab Content: Commission Inquiry Form -->
+          <div id="modal-tab-inquiry" class="hidden">
+            <div id="inquiry-form-container">
+              <form id="inquiry-form" onsubmit="handleInquirySubmit(event)" class="space-y-6 bg-white p-6 rounded-2xl border border-stone-200">
+                <div class="border-b border-stone-100 pb-4">
+                  <h3 id="inquiry-artist-target" class="font-serif text-xl font-bold text-stone-900">작가님께 외주 제작 의뢰하기</h3>
+                  <p class="text-xs text-stone-500 mt-1">
+                    원하시는 작업의 성격과 예산, 마감 일정을 남겨주시면 안전하게 작가님과 직통 연결됩니다.
+                  </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-medium text-stone-700 mb-1.5">프로젝트 유형</label>
+                    <select id="inquiry-project-type" class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white">
+                      <option value="개인 소장용 커스텀 제작">개인 소장용 커스텀 제작</option>
+                      <option value="도서 표지 / 앨범 커버 일러스트">도서 표지 / 앨범 커버 일러스트</option>
+                      <option value="브랜드 패키지 &amp; 제품 디자인">브랜드 패키지 &amp; 제품 디자인</option>
+                      <option value="쇼룸 / 카페 전시용 세라믹 오브제">쇼룸 / 카페 전시용 세라믹 오브제</option>
+                      <option value="기업 답례품 / 단체 주문 제작">기업 답례품 / 단체 주문 제작</option>
+                      <option value="3D 캐릭터 및 디오라마 모델링">3D 캐릭터 및 디오라마 모델링</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-medium text-stone-700 mb-1.5">희망 예산 범위</label>
+                    <select id="inquiry-budget" class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white">
+                      <option value="10만 ~ 20만 원">10만 ~ 20만 원</option>
+                      <option value="20만 ~ 40만 원" selected="">20만 ~ 40만 원</option>
+                      <option value="40만 ~ 80만 원">40만 ~ 80만 원</option>
+                      <option value="80만 ~ 150만 원">80만 ~ 150만 원</option>
+                      <option value="150만 원 이상 (프로젝트형 협의)">150만 원 이상 (프로젝트형 협의)</option>
+                    </select>
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-medium text-stone-700 mb-1.5">의뢰인 성함 / 브랜드명 <span class="text-rose-500">*</span></label>
+                    <input type="text" id="inquiry-client-name" required="" placeholder="홍길동 또는 스튜디오명" class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white">
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-medium text-stone-700 mb-1.5">희망 수령(납기)일</label>
+                    <input type="date" id="inquiry-deadline" class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white">
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-medium text-stone-700 mb-1.5">이메일 주소 <span class="text-rose-500">*</span></label>
+                    <input type="email" id="inquiry-client-email" required="" placeholder="client@example.com" class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white">
+                  </div>
+
+                  <div>
+                    <label class="block text-xs font-medium text-stone-700 mb-1.5">연락처 (휴대폰)</label>
+                    <input type="tel" id="inquiry-client-phone" placeholder="010-0000-0000" class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white">
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-medium text-stone-700 mb-1.5">상세 요청사항 &amp; 컨셉 설명 <span class="text-rose-500">*</span></label>
+                  <textarea id="inquiry-description" rows="4" required="" placeholder="원하시는 분위기, 크기, 수량, 참고 레퍼런스 스타일 등을 자유롭게 적어주세요." class="w-full px-3.5 py-2.5 text-xs text-stone-900 bg-stone-50 border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 focus:bg-white resize-none"></textarea>
+                </div>
+
+                <div class="flex items-start gap-2.5 p-3.5 bg-stone-50 rounded-xl border border-stone-200/80 text-xs text-stone-600">
+                  <svg class="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                  <span>ArtisanHub 안심 에스크로 결제 시스템으로 작업물이 안전하게 완성될 때까지 대금이 보관됩니다.</span>
+                </div>
+
+                <div class="flex justify-end gap-3 pt-2">
+                  <button type="button" onclick="switchModalTab('gallery')" class="px-5 py-2.5 text-xs font-semibold text-stone-700 hover:text-stone-950 bg-stone-100 rounded-xl transition-colors cursor-pointer">
+                    이전으로
+                  </button>
+                  <button type="submit" class="flex items-center gap-2 px-6 py-2.5 bg-stone-900 text-stone-50 text-xs font-semibold rounded-xl hover:bg-stone-800 transition-colors shadow-sm cursor-pointer">
+                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                    <span>외주 견적 문의 전송</span>
+                  </button>
+                </div>
+              </form>
+            </div>
+
+            <!-- Inquiry Success View -->
+            <div id="inquiry-success-view" class="hidden py-12 px-6 text-center bg-white rounded-2xl border border-stone-200">
+              <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4 border border-emerald-200">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+              </div>
+              <h3 class="font-serif text-2xl font-bold text-stone-900 mb-2">외주 견적 문의가 성공적으로 접수되었습니다</h3>
+              <p id="inquiry-success-msg" class="text-sm text-stone-600 max-w-md mx-auto mb-6">
+                작가님께 상세 문의 내용이 전달되었습니다. 24시간 이내에 1:1 상담 안내가 발송됩니다.
+              </p>
+              <div class="flex items-center justify-center gap-3">
+                <button onclick="resetInquiryForm()" class="px-5 py-2.5 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-semibold rounded-xl transition-colors cursor-pointer">
+                  추가 문의 작성하기
+                </button>
+                <button onclick="closeArtistModal()" class="px-5 py-2.5 bg-stone-900 hover:bg-stone-800 text-stone-100 text-xs font-semibold rounded-xl transition-colors cursor-pointer">
+                  확인 완료
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- MODAL 2: Portfolio Registration Modal -->
+    <div id="modal-register" class="hidden fixed inset-0 z-50 overflow-y-auto bg-stone-950/60 backdrop-blur-xs flex items-center justify-center p-3 sm:p-6 transition-opacity">
+      <div class="relative w-full max-w-2xl bg-[#FAF9F5] rounded-3xl border border-stone-200/90 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col" onclick="event.stopPropagation()">
+        
+        <div class="flex items-center justify-between px-6 py-4 border-b border-stone-200/80 bg-white/70 backdrop-blur-sm sticky top-0 z-10">
+          <div>
+            <h2 class="font-serif text-xl sm:text-2xl font-bold text-stone-900">아티스트 포트폴리오 등록</h2>
+            <p class="text-xs text-stone-500 mt-0.5">시각 예술가 &amp; 크래프터님의 작품을 전시하고 외주 의뢰를 받아보세요.</p>
+          </div>
+          <button onclick="closeRegisterModal()" class="p-2 text-stone-400 hover:text-stone-900 rounded-full hover:bg-stone-100 transition-colors cursor-pointer">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        </div>
+
+        <form id="register-form" onsubmit="handleRegisterSubmit(event)" class="overflow-y-auto flex-1 p-6 space-y-6">
+          <div>
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-stone-500 mb-3">1. 아티스트 기본 정보</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">활동 작가명 <span class="text-rose-500">*</span></label>
+                <input type="text" id="reg-name" required="" placeholder="예: 이서현, 스튜디오 노을" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">인스타그램 / 핸들 ID</label>
+                <input type="text" id="reg-handle" placeholder="@your_atelier" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">주요 창작 분야 <span class="text-rose-500">*</span></label>
+                <select id="reg-category" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+                  <option value="illustration">일러스트</option>
+                  <option value="ceramics">도자기</option>
+                  <option value="knitting">뜨개질/공예</option>
+                  <option value="3d_craft">3D/기타</option>
+                </select>
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">작업실 위치 (지역)</label>
+                <input type="text" id="reg-location" value="서울 마포구" placeholder="서울 마포구, 경기도 양평 등" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label class="block text-xs font-medium text-stone-700 mb-1">작가 소개글</label>
+              <textarea id="reg-bio" rows="2" placeholder="추구하는 작업 세계관이나 주력 재료, 기법을 간략히 소개해 주세요." class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900 resize-none"></textarea>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/80">
+            <h3 class="text-xs font-semibold uppercase tracking-wider text-stone-500 mb-3">2. 대표 작품 및 외주 단가 등록</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">대표 작품 제목 <span class="text-rose-500">*</span></label>
+                <input type="text" id="reg-artwork-title" required="" placeholder="예: 푸른 숲의 오후 티타임" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">기본 최소 의뢰 견적 (원)</label>
+                <input type="number" id="reg-minprice" step="10000" value="150000" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-3">
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">평균 제작 소요 기간</label>
+                <input type="text" id="reg-turnaround" value="7 ~ 10일" placeholder="예: 7 ~ 10일" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+
+              <div>
+                <label class="block text-xs font-medium text-stone-700 mb-1">키워드 태그 (쉼표 구분)</label>
+                <input type="text" id="reg-tags" value="수제작, 커스텀외주, 갤러리" placeholder="핸드메이드, 도예, 식기, 일러스트" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+              </div>
+            </div>
+
+            <div class="mt-3">
+              <label class="block text-xs font-medium text-stone-700 mb-1">대표 작품 이미지 선택</label>
+              <div id="reg-preset-images" class="grid grid-cols-4 gap-2 mb-3">
+                <!-- Preset buttons -->
+              </div>
+              <input type="text" id="reg-custom-img" placeholder="또는 외부 이미지 직접 URL 입력 (선택사항)" class="w-full px-3.5 py-2 text-xs text-stone-900 bg-white border border-stone-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-900">
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-stone-200/80 flex items-center justify-end gap-3">
+            <button type="button" onclick="closeRegisterModal()" class="px-4 py-2 text-xs font-semibold text-stone-600 hover:text-stone-900 bg-stone-100 rounded-xl transition-colors cursor-pointer">취소</button>
+            <button type="submit" class="flex items-center gap-1.5 px-6 py-2.5 text-xs font-semibold text-stone-50 bg-stone-900 hover:bg-stone-800 rounded-xl transition-all shadow-sm cursor-pointer">
+              <span>포트폴리오 즉시 등록</span>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast Container -->
+    <div id="toast-container" class="fixed bottom-6 right-6 z-50 flex flex-col gap-2.5 max-w-sm pointer-events-none"></div>
+
+    <!-- Core Interactive Application Script (Self-Contained) -->
+    <script>
+      // Initial Art Assets
+      const IMAGES = {
+        hero: '/src/assets/images/hero_artisan_studio_1793238753889.jpg',
+        ceramicVase: '/src/assets/images/art_ceramic_vase_1793238754343.jpg',
+        knitTapestry: '/src/assets/images/art_knit_tapestry_1793238755726.jpg',
+        editorialIllustration: '/src/assets/images/art_editorial_illustration_1793238755336.jpg',
+        whimsical3D: '/src/assets/images/art_whimsical_3d_1793238756233.jpg',
+        moonJar: '/src/assets/images/art_moon_jar_1793238773073.jpg',
+        botanicalBook: '/src/assets/images/art_botanical_book_1793238773759.jpg',
+        crochetCreatures: '/src/assets/images/art_crochet_creatures_1793238774369.jpg',
+      };
+
+      const INITIAL_ARTISTS = [
+        {
+          id: 'artist-yoon',
+          name: '한서윤',
+          handle: '@studio_yoon',
+          avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+          category: 'ceramics',
+          categoryLabel: '도자기',
+          location: '경기도 이천 도예마을',
+          bio: '자연에서 온 흙과 나무재 유약을 사용해 일상에 스며드는 따뜻한 백자와 오브제를 빚습니다. 미니멀한 실루엣 속 불완전함의 미학을 추구합니다.',
+          experience: '도예 경력 8년 · 개인전 3회 · 2024 한국공예대전 우수상',
+          avgTurnaround: '10 ~ 14일',
+          minPrice: 120000,
+          rating: 4.98,
+          reviewCount: 47,
+          tags: ['달항아리', '오브제 화병', '테이블웨어', '백자토'],
+          gallery: [
+            { title: '달항아리 (Dalhangari No. 04)', image: IMAGES.moonJar, year: '2025', medium: '물레성형, 재유약 고온 소성' },
+            { title: '스페클 크림 화병', image: IMAGES.ceramicVase, year: '2025', medium: '테라코타 믹스, 무광 유약' }
+          ],
+          priceGuide: [
+            { planName: '베이직 오브제 화병', price: 120000, description: '공간의 포인트가 되는 15~20cm 높이의 핸드메이드 화병', turnaround: '10일', includes: ['1:1 점토 톤 상담', '각인 서비스', '선물용 패키징'] },
+            { planName: '전통 달항아리 커스텀', price: 320000, description: '은은한 균열미와 자연스러운 볼륨감의 지름 25cm 달항아리', turnaround: '14~20일', includes: ['전통 물레 작업', '고온 장작가마 소성', '보증서 동봉'] },
+            { planName: '쇼룸 식기 세트 10종', price: 850000, description: '공간 맞춤 머그 및 플레이트 10세트 외주', turnaround: '25~30일', includes: ['브랜드 로고 인각', '식기세척기 가능 코팅', '안심 완충 배송'] }
+          ]
+        },
+        {
+          id: 'artist-min',
+          name: '민지유',
+          handle: '@knot_and_grain',
+          avatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+          category: 'knitting',
+          categoryLabel: '뜨개질/공예',
+          location: '서울 서촌 아틀리에',
+          bio: '천연 메리노 울과 리넨 코튼 원사를 엮어 촉각적 안식을 주는 섬유 태피스트리와 니트 오브제를 만듭니다.',
+          experience: '섬유예술 석사 · 라이프스타일 브랜드 협업 다수',
+          avgTurnaround: '7 ~ 12일',
+          minPrice: 85000,
+          rating: 4.95,
+          reviewCount: 38,
+          tags: ['위빙 태피스트리', '청키 니트', '촉각 오브제', '울 인테리어'],
+          gallery: [
+            { title: '포레스트 세이지 월 태피스트리', image: IMAGES.knitTapestry, year: '2025', medium: '핸드위빙, 메리노 울' },
+            { title: '웜 아틀리에 니트 세트', image: IMAGES.crochetCreatures, year: '2025', medium: '손뜨개, 천연 염색 원사' }
+          ],
+          priceGuide: [
+            { planName: '미니 월 행잉 태피스트리', price: 85000, description: '가로 30cm 세로 45cm 벽걸이 섬유 인테리어', turnaround: '7일', includes: ['컬러 3색 선택', '원목 걸이대 포함', '보관 파우치'] },
+            { planName: '대형 텍스처 태피스트리', price: 240000, description: '가로 80cm 규모의 입체 위빙 아트', turnaround: '14일', includes: ['스케치 시안 2종', '황동 프레임', '벽면 설치 가이드'] }
+          ]
+        },
+        {
+          id: 'artist-haesol',
+          name: '김해솔',
+          handle: '@haesol_illust',
+          avatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+          category: 'illustration',
+          categoryLabel: '일러스트',
+          location: '서울 마포구 연남동',
+          bio: '밤하늘, 계절의 온기, 몽환적인 자연 풍경을 그리는 일러스트레이터입니다. 도서 표지 및 앨범 커버 외주를 주로 진행합니다.',
+          experience: '단행본 표지 15종 일러스트 · 네이버 그라폴리오 우수 창작자',
+          avgTurnaround: '5 ~ 10일',
+          minPrice: 150000,
+          rating: 5.0,
+          reviewCount: 62,
+          tags: ['도서 표지', '디지털 과슈', '몽환적 풍경', '앨범 아트'],
+          gallery: [
+            { title: '목련 그늘 아래의 독서', image: IMAGES.editorialIllustration, year: '2025', medium: '디지털 페인팅, 과슈 질감' }
+          ],
+          priceGuide: [
+            { planName: '개인 소장용 포스터 일러스트', price: 150000, description: 'A3 고해상도 디지털 원본 파일 및 CMYK 제공', turnaround: '5일', includes: ['초안 러프스케치 2회 수정', '300DPI 고해상도 원본', '월페이퍼 증정'] },
+            { planName: '상업용 도서 표지 / 앨범 아트', price: 450000, description: '인쇄 및 온라인 배포 라이선스 포함 일러스트', turnaround: '10일', includes: ['상업 라이선스 계약', '레이어 분리 PSD', '타이포그래피 배치 자문'] }
+          ]
+        },
+        {
+          id: 'artist-eunwoo',
+          name: '정은우',
+          handle: '@herbarium_atelier',
+          avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+          category: 'illustration',
+          categoryLabel: '일러스트',
+          location: '강원도 춘천',
+          bio: '야생화와 약용 식물의 섬세한 선을 펜과 수채화로 기록합니다. 유기농 티 브랜드 패키지 및 굿즈 외주 전문입니다.',
+          experience: '국립수목원 협업 도감 제작 · F&B 패키지 일러스트 20여 종',
+          avgTurnaround: '7 ~ 14일',
+          minPrice: 180000,
+          rating: 4.96,
+          reviewCount: 29,
+          tags: ['보태니컬', '빈티지 펜드로잉', '식물도감', '패키지 디자인'],
+          gallery: [
+            { title: '야생 약초학 식물도감', image: IMAGES.botanicalBook, year: '2025', medium: '잉크 펜, 수채 물감' }
+          ],
+          priceGuide: [
+            { planName: '단일 식물 개체 드로잉', price: 180000, description: '정밀 펜선과 은은한 수채 채색 일러스트 1컷', turnaround: '7일', includes: ['투명 배경 PNG/PDF', '상업용 패키지 사용권', '시안 수정 2회'] },
+            { planName: '브랜드 보태니컬 패턴 세트', price: 520000, description: '식물 4종 일러스트 + 무한 반복 패턴', turnaround: '14일', includes: ['벡터 호환 원본', '제품 목업 적용 3종', '라이선스 독점 협의'] }
+          ]
+        },
+        {
+          id: 'artist-lucas',
+          name: '루카스 림',
+          handle: '@lucas_clayverse',
+          avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+          category: '3d_craft',
+          categoryLabel: '3D/기타',
+          location: '서울 성수동',
+          bio: '따뜻한 클레이메이션 질감의 3D 캐릭터와 환상적인 미니어처 디오라마를 모델링합니다. 브랜드 마스코트 및 게임 에셋 제작.',
+          experience: '3D 모션 그래픽 6년 · 글로벌 애니메이션 페스티벌 초청',
+          avgTurnaround: '10 ~ 15일',
+          minPrice: 200000,
+          rating: 4.97,
+          reviewCount: 34,
+          tags: ['클레이 3D', '미니어처', '캐릭터 외주', '블렌더 아트'],
+          gallery: [
+            { title: '포레스트 글라스 테라리움', image: IMAGES.whimsical3D, year: '2025', medium: '3D 디지털 클레이 모델링' }
+          ],
+          priceGuide: [
+            { planName: '3D 클레이 캐릭터 모델링 1종', price: 200000, description: '클레이 질감 캐릭터 3D 렌더링 4컷', turnaround: '10일', includes: ['4K 고해상도 렌더링', '투명 배경 소스', '포즈 2종'] },
+            { planName: '풀 디오라마 씬 턴테이블', price: 600000, description: '배경 오브젝트 완비 디오라마 + 15초 영상', turnaround: '15일', includes: ['Blender 프로젝트 파일', 'MP4 루프 영상', '스틸컷 8장'] }
+          ]
+        }
+      ];
+
+      const INITIAL_ARTWORKS = [
+        {
+          id: 'art-1',
+          title: '포레스트 글라스 테라리움 속 요정들',
+          artistId: 'artist-lucas',
+          artistName: '루카스 림',
+          artistHandle: '@lucas_clayverse',
+          artistAvatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80',
+          category: '3d_craft',
+          categoryLabel: '3D/기타',
+          image: IMAGES.whimsical3D,
+          likes: 248,
+          isLiked: false,
+          description: '유리병 속 작은 이끼 정원에 살고 있는 클레이 숲 요정과 달팽이. 따스한 버섯 조명이 은은히 켜지는 3D 미니어처 작업입니다.',
+          year: 2025,
+          minPrice: 200000,
+          turnaroundDays: '10일',
+          usageType: '브랜드 마스코트 / 캐릭터 외주'
+        },
+        {
+          id: 'art-2',
+          title: '백자 달항아리 (Moon Jar No. 04)',
+          artistId: 'artist-yoon',
+          artistName: '한서윤',
+          artistHandle: '@studio_yoon',
+          artistAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+          category: 'ceramics',
+          categoryLabel: '도자기',
+          image: IMAGES.moonJar,
+          likes: 312,
+          isLiked: false,
+          description: '조선 백자의 담백한 형태를 현대적으로 재해석하여, 은은한 빙렬과 비대칭의 곡선미가 돋보이는 수제 달항아리입니다.',
+          year: 2025,
+          minPrice: 320000,
+          turnaroundDays: '14일',
+          usageType: '갤러리 / 하이엔드 인테리어 오브제'
+        },
+        {
+          id: 'art-3',
+          title: '달밤 목련 그늘 아래의 고요한 독서',
+          artistId: 'artist-haesol',
+          artistName: '김해솔',
+          artistHandle: '@haesol_illust',
+          artistAvatar: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=150&auto=format&fit=crop&q=80',
+          category: 'illustration',
+          categoryLabel: '일러스트',
+          image: IMAGES.editorialIllustration,
+          likes: 421,
+          isLiked: true,
+          description: '황혼이 내린 언덕, 활짝 핀 목련나무 아래 램프를 켜두고 책에 몰입하는 순간의 평온함을 풍성한 과슈 브러시 질감으로 담아냈습니다.',
+          year: 2025,
+          minPrice: 150000,
+          turnaroundDays: '5일',
+          usageType: '단행본 북커버 / 에세이 삽화'
+        },
+        {
+          id: 'art-4',
+          title: '내추럴 스페클 크림 화병과 들꽃',
+          artistId: 'artist-yoon',
+          artistName: '한서윤',
+          artistHandle: '@studio_yoon',
+          artistAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+          category: 'ceramics',
+          categoryLabel: '도자기',
+          image: IMAGES.ceramicVase,
+          likes: 189,
+          isLiked: false,
+          description: '거친 테라코타 흙의 질감과 크림빛 반점 유약이 자연스러운 대조를 이루며, 마른 들꽃 한 송이만으로도 공간의 분위기를 바꿉니다.',
+          year: 2025,
+          minPrice: 120000,
+          turnaroundDays: '10일',
+          usageType: '개인 소장 / 카페 테이블웨어'
+        },
+        {
+          id: 'art-5',
+          title: '오가닉 세이지 울 위빙 태피스트리',
+          artistId: 'artist-min',
+          artistName: '민지유',
+          artistHandle: '@knot_and_grain',
+          artistAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+          category: 'knitting',
+          categoryLabel: '뜨개질/공예',
+          image: IMAGES.knitTapestry,
+          likes: 275,
+          isLiked: false,
+          description: '세이지 그린과 머스터드 오커 컬러의 청키한 메리노 양모를 핸드위빙 기법으로 엮어 풍부한 볼륨감과 포근한 촉감을 살렸습니다.',
+          year: 2025,
+          minPrice: 180000,
+          turnaroundDays: '8일',
+          usageType: '벽걸이 인테리어 / 쇼룸 디스플레이'
+        },
+        {
+          id: 'art-6',
+          title: '야생 약초학 식물도감 컬렉션',
+          artistId: 'artist-eunwoo',
+          artistName: '정은우',
+          artistHandle: '@herbarium_atelier',
+          artistAvatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80',
+          category: 'illustration',
+          categoryLabel: '일러스트',
+          image: IMAGES.botanicalBook,
+          likes: 334,
+          isLiked: false,
+          description: '세인트존스워트, 야생 타임, 카모마일 등 숲속 약초들의 꽃과 뿌리를 빈티지 필기체와 섬세한 펜 터치로 기록한 도감 일러스트입니다.',
+          year: 2025,
+          minPrice: 180000,
+          turnaroundDays: '7일',
+          usageType: '티 브랜드 패키지 / 내추럴 브랜딩'
+        },
+        {
+          id: 'art-7',
+          title: '웜 아틀리에 핸드메이드 니트 & 크로셰 친구들',
+          artistId: 'artist-min',
+          artistName: '민지유',
+          artistHandle: '@knot_and_grain',
+          artistAvatar: 'https://images.unsplash.com/photo-1517841905240-472988babdf9?w=150&auto=format&fit=crop&q=80',
+          category: 'knitting',
+          categoryLabel: '뜨개질/공예',
+          image: IMAGES.crochetCreatures,
+          likes: 198,
+          isLiked: false,
+          description: '클래식 케이블 니팅으로 짠 울 담요와 손으로 한 땀 한 땀 뜬 숲속 동물 마스코트 오브제들입니다.',
+          year: 2025,
+          minPrice: 95000,
+          turnaroundDays: '7일',
+          usageType: '유아동 브랜드 화보 / 커스텀 제작 선물'
+        },
+        {
+          id: 'art-8',
+          title: '아티산 공방의 온기 - 도예 & 페인팅 스튜디오',
+          artistId: 'artist-yoon',
+          artistName: '한서윤',
+          artistHandle: '@studio_yoon',
+          artistAvatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+          category: 'ceramics',
+          categoryLabel: '도자기',
+          image: IMAGES.hero,
+          likes: 512,
+          isLiked: true,
+          description: '창가로 햇살이 스며드는 한서윤 작가의 이천 아틀리에. 물레 위의 점토, 선반에 마르고 있는 기물들.',
+          year: 2025,
+          minPrice: 500000,
+          turnaroundDays: '20일',
+          usageType: '공간 브랜딩 / 쇼룸 세라믹 디렉팅'
+        }
+      ];
+
+      // App State
+      let artists = JSON.parse(localStorage.getItem('artisanhub_artists') || 'null') || INITIAL_ARTISTS;
+      let artworks = JSON.parse(localStorage.getItem('artisanhub_artworks') || 'null') || INITIAL_ARTWORKS;
+      let currentTab = 'feed';
+      let currentCategory = 'all';
+      let searchQuery = '';
+      let currentSort = 'popular';
+      let selectedArtist = null;
+      let selectedArtwork = null;
+      let selectedRegPreset = IMAGES.editorialIllustration;
+
+      // Calculator State
+      let calcState = {
+        category: 'ceramics',
+        usage: 'personal',
+        speed: 'normal'
+      };
+
+      // Toast System
+      function showToast(type, title, description) {
+        const container = document.getElementById('toast-container');
+        const toast = document.createElement('div');
+        toast.className = 'toast-enter pointer-events-auto bg-stone-900 text-stone-50 p-4 rounded-2xl shadow-xl border border-stone-800 flex items-start gap-3';
+        
+        let iconSvg = '<svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>';
+        if (type === 'like') {
+          iconSvg = '<svg class="w-4 h-4 fill-rose-500 text-rose-500" viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>';
+        }
+
+        toast.innerHTML = `
+          <div class="mt-0.5 text-stone-300 shrink-0">${iconSvg}</div>
+          <div class="flex-1 min-w-0">
+            <h5 class="text-xs font-bold leading-snug">${title}</h5>
+            ${description ? `<p class="text-[11px] text-stone-400 mt-0.5 line-clamp-2">${description}</p>` : ''}
+          </div>
+          <button onclick="this.parentElement.remove()" class="text-stone-400 hover:text-white p-1 rounded-lg transition-colors cursor-pointer">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+          </button>
+        `;
+        container.appendChild(toast);
+        setTimeout(() => {
+          if (toast.parentElement) toast.remove();
+        }, 3500);
+      }
+
+      function saveStorage() {
+        localStorage.setItem('artisanhub_artists', JSON.stringify(artists));
+        localStorage.setItem('artisanhub_artworks', JSON.stringify(artworks));
+      }
+
+      // Tab Switching
+      function switchTab(tab) {
+        currentTab = tab;
+
+        // View Visibility
+        const viewFeed = document.getElementById('view-feed');
+        const viewArtists = document.getElementById('view-artists');
+        const viewGuide = document.getElementById('view-guide');
+        const heroSection = document.getElementById('hero-section');
+        const bookmarksHeader = document.getElementById('bookmarks-header');
+
+        viewFeed.classList.add('hidden');
+        viewArtists.classList.add('hidden');
+        viewGuide.classList.add('hidden');
+        bookmarksHeader.classList.add('hidden');
+
+        // Nav Indicators
+        ['feed', 'artists', 'guide', 'bookmarks'].forEach(t => {
+          const indicator = document.getElementById(`nav-indicator-${t}`);
+          const navBtn = document.getElementById(`nav-${t}`);
+          if (indicator) indicator.classList.add('hidden');
+          if (navBtn) {
+            navBtn.classList.remove('text-stone-950', 'font-semibold');
+            navBtn.classList.add('hover:text-stone-900');
+          }
+        });
+
+        const activeNav = document.getElementById(`nav-${tab}`);
+        const activeIndicator = document.getElementById(`nav-indicator-${tab}`);
+        if (activeNav) {
+          activeNav.classList.add('text-stone-950', 'font-semibold');
+          activeNav.classList.remove('hover:text-stone-900');
+        }
+        if (activeIndicator) activeIndicator.classList.remove('hidden');
+
+        // Mobile Nav Highlights
+        ['feed', 'artists', 'guide', 'bookmarks'].forEach(t => {
+          const mBtn = document.getElementById(`mobile-nav-${t}`);
+          if (mBtn) mBtn.className = 'px-2.5 py-1.5 rounded-lg';
+        });
+        const activeMobileBtn = document.getElementById(`mobile-nav-${tab}`);
+        if (activeMobileBtn) activeMobileBtn.className = 'px-2.5 py-1.5 rounded-lg bg-stone-200 text-stone-900 font-semibold';
+
+        if (tab === 'feed') {
+          viewFeed.classList.remove('hidden');
+          heroSection.classList.remove('hidden');
+          renderArtworks();
+        } else if (tab === 'bookmarks') {
+          viewFeed.classList.remove('hidden');
+          heroSection.classList.add('hidden');
+          bookmarksHeader.classList.remove('hidden');
+          renderArtworks();
+        } else if (tab === 'artists') {
+          viewArtists.classList.remove('hidden');
+          heroSection.classList.add('hidden');
+          renderArtists();
+        } else if (tab === 'guide') {
+          viewGuide.classList.remove('hidden');
+          heroSection.classList.add('hidden');
+          updateCalculator();
+        }
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
+
+      // Filter & Sort
+      function setCategory(cat) {
+        currentCategory = cat;
+        ['all', 'illustration', 'ceramics', 'knitting', '3d_craft'].forEach(c => {
+          const btn = document.getElementById(`cat-btn-${c}`);
+          if (btn) {
+            if (c === cat) {
+              btn.className = 'px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer bg-stone-900 text-stone-50 shadow-xs';
+            } else {
+              btn.className = 'px-4 py-2 text-xs sm:text-sm font-medium rounded-lg transition-all whitespace-nowrap cursor-pointer text-stone-700 hover:text-stone-950';
+            }
+          }
+        });
+        renderArtworks();
+      }
+
+      function handleSearch(val) {
+        searchQuery = val;
+        const clearBtn = document.getElementById('search-clear-btn');
+        if (val.trim()) {
+          clearBtn.classList.remove('hidden');
+        } else {
+          clearBtn.classList.add('hidden');
+        }
+        if (currentTab !== 'feed' && currentTab !== 'bookmarks') {
+          switchTab('feed');
+        }
+        renderArtworks();
+      }
+
+      function clearSearch() {
+        const input = document.getElementById('search-input');
+        input.value = '';
+        handleSearch('');
+      }
+
+      function applyKeywordSearch(kw) {
+        const input = document.getElementById('search-input');
+        input.value = kw;
+        handleSearch(kw);
+      }
+
+      function handleSortChange(sortVal) {
+        currentSort = sortVal;
+        renderArtworks();
+      }
+
+      // Like toggle
+      function toggleLike(artworkId, event) {
+        if (event) event.stopPropagation();
+        const art = artworks.find(a => a.id === artworkId);
+        if (!art) return;
+
+        art.isLiked = !art.isLiked;
+        art.likes = art.isLiked ? art.likes + 1 : Math.max(0, art.likes - 1);
+        saveStorage();
+
+        if (art.isLiked) {
+          showToast('like', `'${art.title}' 보관함 저장`, `${art.artistName} 작가의 작품을 보관함에 담았습니다.`);
+        } else {
+          showToast('info', '보관함에서 삭제되었습니다');
+        }
+
+        updateBookmarksBadge();
+        renderArtworks();
+      }
+
+      function updateBookmarksBadge() {
+        const likedCount = artworks.filter(a => a.isLiked).length;
+        const badge = document.getElementById('badge-bookmarks-count');
+        const mobileBadge = document.getElementById('mobile-badge-count');
+        
+        if (badge) {
+          if (likedCount > 0) {
+            badge.innerText = likedCount;
+            badge.classList.remove('hidden');
+          } else {
+            badge.classList.add('hidden');
+          }
+        }
+        if (mobileBadge) {
+          mobileBadge.innerText = likedCount > 0 ? `(${likedCount})` : '';
+        }
+      }
+
+      // Render Artworks Grid (Pinterest Masonry)
+      function renderArtworks() {
+        const grid = document.getElementById('artworks-grid');
+        const emptyState = document.getElementById('empty-state');
+        const countSpan = document.getElementById('artworks-count');
+
+        const filtered = artworks.filter(art => {
+          if (currentTab === 'bookmarks' && !art.isLiked) return false;
+          if (currentCategory !== 'all' && art.category !== currentCategory) return false;
+          if (searchQuery.trim()) {
+            const q = searchQuery.toLowerCase().trim();
+            const match = art.title.toLowerCase().includes(q) ||
+                          art.artistName.toLowerCase().includes(q) ||
+                          art.categoryLabel.toLowerCase().includes(q) ||
+                          (art.description && art.description.toLowerCase().includes(q)) ||
+                          (art.usageType && art.usageType.toLowerCase().includes(q));
+            if (!match) return false;
+          }
+          return true;
+        }).sort((a, b) => {
+          if (currentSort === 'popular') return b.likes - a.likes;
+          if (currentSort === 'price') return a.minPrice - b.minPrice;
+          if (currentSort === 'latest') return b.year - a.year;
+          return 0;
+        });
+
+        countSpan.innerText = filtered.length;
+
+        if (filtered.length === 0) {
+          grid.innerHTML = '';
+          emptyState.classList.remove('hidden');
+          return;
+        }
+
+        emptyState.classList.add('hidden');
+        grid.innerHTML = filtered.map(art => {
+          const heartClass = art.isLiked ? 'fill-rose-500 text-rose-500 scale-110' : 'text-stone-400';
+          const heartBtnClass = art.isLiked ? 'bg-rose-500 text-white shadow-md' : 'bg-white/80 text-stone-700 hover:bg-white hover:text-rose-500 shadow-xs';
+          
+          return `
+            <div onclick="openArtistModalByArtwork('${art.id}')" class="break-inside-avoid group relative bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 cursor-pointer flex flex-col">
+              <div class="relative overflow-hidden bg-stone-100">
+                <img src="${art.image}" alt="${art.title}" loading="lazy" class="w-full h-auto object-cover group-hover:scale-103 transition-transform duration-500 ease-out" />
+                <button onclick="toggleLike('${art.id}', event)" class="absolute top-3 right-3 z-10 p-2 rounded-full backdrop-blur-md transition-all active:scale-90 cursor-pointer ${heartBtnClass}" title="좋아요 토글">
+                  <svg class="w-4 h-4 transition-transform ${art.isLiked ? 'fill-current' : ''}" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                  </svg>
+                </button>
+                <div class="absolute inset-0 bg-stone-950/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center pointer-events-none">
+                  <span class="bg-stone-900/80 backdrop-blur-xs text-stone-100 text-xs px-3 py-1.5 rounded-full font-medium shadow-sm">
+                    작품 및 작가 프로필 보기
+                  </span>
+                </div>
+              </div>
+              <div class="p-4 sm:p-4.5 flex flex-col flex-1">
+                <div class="flex items-center gap-1.5 text-[11px] text-stone-500 font-medium mb-1.5">
+                  <span>${art.categoryLabel}</span>
+                  <span aria-hidden="true">·</span>
+                  <span class="truncate">${art.usageType || '맞춤 제작'}</span>
+                </div>
+                <h3 class="font-serif text-base sm:text-lg font-bold text-stone-900 leading-snug line-clamp-1 mb-2 group-hover:text-amber-900 transition-colors">
+                  ${art.title}
+                </h3>
+                <div class="flex items-center gap-2.5 mb-3">
+                  <img src="${art.artistAvatar}" alt="${art.artistName}" class="w-6 h-6 rounded-full object-cover border border-stone-200" />
+                  <div class="flex flex-col min-w-0">
+                    <span class="text-xs font-semibold text-stone-800 truncate leading-none">${art.artistName}</span>
+                    <span class="text-[10px] text-stone-400 font-mono truncate">${art.artistHandle}</span>
+                  </div>
+                </div>
+                <div class="mt-auto pt-3 border-t border-stone-100 flex items-center justify-between gap-2">
+                  <div class="flex flex-col">
+                    <span class="text-[10px] text-stone-400">최소 견적 기준</span>
+                    <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩${art.minPrice.toLocaleString()}~</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="flex items-center gap-1 text-[11px] font-mono text-stone-500 tabular-nums">
+                      <svg class="w-3.5 h-3.5 ${heartClass}" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"></path></svg>
+                      ${art.likes}
+                    </span>
+                    <button onclick="requestCommissionByArtwork('${art.id}', event)" class="flex items-center gap-1 px-3 py-1.5 text-xs font-semibold text-stone-900 bg-stone-100 hover:bg-stone-900 hover:text-white rounded-lg transition-colors cursor-pointer">
+                      <span>의뢰하기</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // Render Artists Directory
+      function renderArtists() {
+        const grid = document.getElementById('artists-grid');
+        const countSpan = document.getElementById('artists-total-count');
+        countSpan.innerText = artists.length;
+
+        grid.innerHTML = artists.map(artist => {
+          const galleryThumbs = (artist.gallery || []).slice(0, 3).map(g => `
+            <div class="aspect-square rounded-xl overflow-hidden bg-stone-100 border border-stone-200/80 cursor-pointer" onclick="openArtistModal('${artist.id}')">
+              <img src="${g.image}" alt="${g.title}" class="w-full h-full object-cover hover:scale-105 transition-transform" />
+            </div>
+          `).join('');
+
+          const tagsHtml = (artist.tags || []).slice(0, 3).map(t => `
+            <span class="text-[10px] text-stone-500 bg-stone-50 border border-stone-100 px-2 py-0.5 rounded">#${t}</span>
+          `).join('');
+
+          return `
+            <div class="bg-white rounded-2xl border border-stone-200/90 p-5 flex flex-col justify-between hover:shadow-md transition-shadow group">
+              <div>
+                <div class="flex items-start gap-3.5 mb-4">
+                  <img src="${artist.avatar}" alt="${artist.name}" class="w-14 h-14 rounded-2xl object-cover border border-stone-200 shrink-0" />
+                  <div class="min-w-0 flex-1">
+                    <div class="flex items-center justify-between gap-2">
+                      <h3 class="font-serif text-lg font-bold text-stone-900 truncate">${artist.name}</h3>
+                      <span class="text-[11px] font-medium text-stone-600 bg-stone-100 px-2 py-0.5 rounded-md shrink-0">${artist.categoryLabel}</span>
+                    </div>
+                    <div class="text-xs font-mono text-stone-400 truncate">${artist.handle}</div>
+                    <div class="flex items-center gap-2 text-[11px] text-stone-500 mt-1">
+                      <span>${artist.location.split(' ')[0]}</span>
+                      <span aria-hidden="true">·</span>
+                      <span class="font-mono text-stone-700">★ ${artist.rating} (${artist.reviewCount})</span>
+                    </div>
+                  </div>
+                </div>
+
+                <p class="text-xs text-stone-600 line-clamp-2 mb-4 leading-relaxed">${artist.bio}</p>
+
+                <div class="grid grid-cols-3 gap-2 mb-4">
+                  ${galleryThumbs}
+                </div>
+
+                <div class="flex flex-wrap gap-1.5 mb-4">
+                  ${tagsHtml}
+                </div>
+              </div>
+
+              <div class="pt-3 border-t border-stone-100 flex items-center justify-between gap-3">
+                <div class="flex flex-col">
+                  <span class="text-[10px] text-stone-400">최소 견적</span>
+                  <span class="font-mono text-xs font-bold text-stone-900 tabular-nums">₩${artist.minPrice.toLocaleString()}~</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <button onclick="openArtistModal('${artist.id}')" class="px-3 py-1.5 text-xs font-medium text-stone-700 hover:text-stone-950 bg-stone-100 hover:bg-stone-200 rounded-lg transition-colors cursor-pointer">
+                    프로필
+                  </button>
+                  <button onclick="openArtistModalForInquiry('${artist.id}')" class="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-semibold text-white bg-stone-900 hover:bg-stone-800 rounded-lg transition-colors cursor-pointer">
+                    <span>의뢰하기</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          `;
+        }).join('');
+      }
+
+      // MODAL 1: Artist Profile Logic
+      function openArtistModalByArtwork(artworkId) {
+        const art = artworks.find(a => a.id === artworkId);
+        if (!art) return;
+        selectedArtwork = art;
+        openArtistModal(art.artistId);
+      }
+
+      function requestCommissionByArtwork(artworkId, event) {
+        if (event) event.stopPropagation();
+        openArtistModalByArtwork(artworkId);
+        switchModalTab('inquiry');
+        const descField = document.getElementById('inquiry-description');
+        if (descField && selectedArtwork) {
+          descField.value = `안녕하세요, 작가님의 '${selectedArtwork.title}' 작품을 보고 맞춤 외주 제작을 의뢰드립니다.`;
+        }
+      }
+
+      function openArtistModalForInquiry(artistId) {
+        selectedArtwork = null;
+        openArtistModal(artistId);
+        switchModalTab('inquiry');
+      }
+
+      function openArtistModal(artistId) {
+        selectedArtist = artists.find(a => a.id === artistId) || artists[0];
+
+        // Populate Modal Fields
+        document.getElementById('modal-artist-name').innerText = selectedArtist.name;
+        document.getElementById('modal-artist-handle').innerText = selectedArtist.handle;
+        document.getElementById('modal-artist-avatar').src = selectedArtist.avatar;
+        document.getElementById('modal-artist-bio').innerText = selectedArtist.bio;
+        document.getElementById('modal-artist-experience').innerText = selectedArtist.experience || '';
+        document.getElementById('modal-artist-location').innerText = `📍 ${selectedArtist.location}`;
+        document.getElementById('modal-artist-rating').innerText = `★ ${selectedArtist.rating} (${selectedArtist.reviewCount} reviews)`;
+        document.getElementById('modal-artist-turnaround').innerText = selectedArtist.avgTurnaround;
+        document.getElementById('modal-artist-minprice').innerText = `₩${selectedArtist.minPrice.toLocaleString()}~`;
+        document.getElementById('modal-artist-meta').innerHTML = `
+          <span>${selectedArtist.categoryLabel}</span>
+          <span aria-hidden="true">·</span>
+          <span>${selectedArtist.location}</span>
+        `;
+
+        // Target name on inquiry form
+        document.getElementById('inquiry-artist-target').innerText = `${selectedArtist.name} 작가님께 외주 제작 의뢰하기`;
+
+        // Populate Gallery
+        const gallery = selectedArtist.gallery || [];
+        const mainImg = document.getElementById('modal-gallery-main-img');
+        const mainTitle = document.getElementById('modal-gallery-main-title');
+        const mainSub = document.getElementById('modal-gallery-main-sub');
+
+        if (gallery.length > 0) {
+          mainImg.src = gallery[0].image;
+          mainTitle.innerText = gallery[0].title;
+          mainSub.innerText = `${gallery[0].medium || ''} (${gallery[0].year || '2025'})`;
+        }
+
+        const thumbsContainer = document.getElementById('modal-gallery-thumbs');
+        thumbsContainer.innerHTML = gallery.map((item, idx) => `
+          <button onclick="setMainGalleryImage(${idx})" class="modal-thumb-btn relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all shrink-0 cursor-pointer ${idx === 0 ? 'border-stone-900 ring-2 ring-stone-900/20' : 'border-transparent opacity-70'}">
+            <img src="${item.image}" alt="${item.title}" class="w-full h-full object-cover" />
+          </button>
+        `).join('');
+
+        // Populate Tags
+        const tagsContainer = document.getElementById('modal-tags-container');
+        tagsContainer.innerHTML = (selectedArtist.tags || []).map(t => `
+          <span class="text-xs text-stone-600 bg-stone-100 border border-stone-200/80 px-2.5 py-1 rounded-md">#${t}</span>
+        `).join('');
+
+        // Populate Pricing Tab
+        const pricingGrid = document.getElementById('modal-pricing-grid');
+        const plans = selectedArtist.priceGuide || [
+          { planName: '기본 커스텀 제작', price: selectedArtist.minPrice, description: '작가 특유의 감성을 담은 1:1 핸드크래프트 작업', turnaround: selectedArtist.avgTurnaround, includes: ['1:1 작업 상담', '시안 수정 1회', '완충 안전 포장'] }
+        ];
+
+        pricingGrid.innerHTML = plans.map(p => `
+          <div class="bg-white rounded-2xl p-5 border border-stone-200/90 flex flex-col justify-between hover:border-stone-400 transition-colors shadow-2xs">
+            <div>
+              <h4 class="font-serif text-lg font-bold text-stone-900 mb-1">${p.planName}</h4>
+              <p class="text-xs text-stone-500 mb-4 line-clamp-2">${p.description}</p>
+              <div class="mb-4">
+                <span class="text-[10px] text-stone-400 block">예상 견적</span>
+                <span class="font-mono text-xl font-bold text-stone-900 tabular-nums">₩${p.price.toLocaleString()}</span>
+                <span class="text-xs text-stone-500 ml-1">부터</span>
+              </div>
+              <div class="space-y-2 mb-4">
+                <div class="text-xs text-stone-600">작업 기간: ${p.turnaround}</div>
+                ${(p.includes || []).map(inc => `
+                  <div class="flex items-center gap-1.5 text-xs text-stone-600">
+                    <span class="text-stone-900 font-bold">✓</span>
+                    <span>${inc}</span>
+                  </div>
+                `).join('')}
+              </div>
+            </div>
+            <button onclick="selectPlanForInquiry('${p.planName}')" class="w-full py-2.5 bg-stone-900 text-stone-100 rounded-xl text-xs font-semibold hover:bg-stone-800 transition-colors cursor-pointer mt-2">
+              이 플랜으로 견적 문의
+            </button>
+          </div>
+        `).join('');
+
+        switchModalTab('gallery');
+        resetInquiryForm();
+        document.getElementById('modal-artist-profile').classList.remove('hidden');
+      }
+
+      function setMainGalleryImage(idx) {
+        if (!selectedArtist || !selectedArtist.gallery[idx]) return;
+        const item = selectedArtist.gallery[idx];
+        document.getElementById('modal-gallery-main-img').src = item.image;
+        document.getElementById('modal-gallery-main-title').innerText = item.title;
+        document.getElementById('modal-gallery-main-sub').innerText = `${item.medium || ''} (${item.year || '2025'})`;
+
+        const thumbBtns = document.querySelectorAll('.modal-thumb-btn');
+        thumbBtns.forEach((btn, i) => {
+          if (i === idx) {
+            btn.className = 'modal-thumb-btn relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all shrink-0 cursor-pointer border-stone-900 ring-2 ring-stone-900/20 opacity-100';
+          } else {
+            btn.className = 'modal-thumb-btn relative w-20 h-20 rounded-xl overflow-hidden border-2 transition-all shrink-0 cursor-pointer border-transparent opacity-70';
+          }
+        });
+      }
+
+      function closeArtistModal() {
+        document.getElementById('modal-artist-profile').classList.add('hidden');
+      }
+
+      function switchModalTab(tab) {
+        const tabGallery = document.getElementById('modal-tab-gallery');
+        const tabPricing = document.getElementById('modal-tab-pricing');
+        const tabInquiry = document.getElementById('modal-tab-inquiry');
+
+        const btnGallery = document.getElementById('modal-tab-gallery-btn');
+        const btnPricing = document.getElementById('modal-tab-pricing-btn');
+        const btnInquiry = document.getElementById('modal-tab-inquiry-btn');
+
+        tabGallery.classList.add('hidden');
+        tabPricing.classList.add('hidden');
+        tabInquiry.classList.add('hidden');
+
+        btnGallery.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer';
+        btnPricing.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer';
+        btnInquiry.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg text-stone-600 hover:text-stone-900 cursor-pointer flex items-center gap-1.5';
+
+        if (tab === 'gallery') {
+          tabGallery.classList.remove('hidden');
+          btnGallery.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-stone-900 text-stone-50 cursor-pointer';
+        } else if (tab === 'pricing') {
+          tabPricing.classList.remove('hidden');
+          btnPricing.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-stone-900 text-stone-50 cursor-pointer';
+        } else if (tab === 'inquiry') {
+          tabInquiry.classList.remove('hidden');
+          btnInquiry.className = 'px-4 py-2 text-xs sm:text-sm font-semibold rounded-lg bg-stone-900 text-stone-50 cursor-pointer flex items-center gap-1.5';
+        }
+      }
+
+      function selectPlanForInquiry(planName) {
+        switchModalTab('inquiry');
+        const typeSelect = document.getElementById('inquiry-project-type');
+        if (typeSelect) typeSelect.value = planName;
+      }
+
+      function handleInquirySubmit(event) {
+        event.preventDefault();
+        const clientName = document.getElementById('inquiry-client-name').value;
+        const clientEmail = document.getElementById('inquiry-client-email').value;
+
+        document.getElementById('inquiry-form-container').classList.add('hidden');
+        document.getElementById('inquiry-success-view').classList.remove('hidden');
+        document.getElementById('inquiry-success-msg').innerText = `${selectedArtist.name} 작가님께 상세 문의가 접수되었습니다. 기재해주신 이메일(${clientEmail})로 24시간 내에 1:1 상담 안내가 발송됩니다.`;
+
+        showToast('success', '외주 견적 문의 전송 완료', `${selectedArtist.name} 작가님께 전달되었습니다.`);
+      }
+
+      function resetInquiryForm() {
+        document.getElementById('inquiry-form-container').classList.remove('hidden');
+        document.getElementById('inquiry-success-view').classList.add('hidden');
+        const form = document.getElementById('inquiry-form');
+        if (form) form.reset();
+      }
+
+      // MODAL 2: Portfolio Registration Logic
+      function openRegisterModal() {
+        const presetContainer = document.getElementById('reg-preset-images');
+        const presets = [
+          { label: '일러스트', url: IMAGES.editorialIllustration },
+          { label: '보태니컬', url: IMAGES.botanicalBook },
+          { label: '도자기 화병', url: IMAGES.ceramicVase },
+          { label: '백자 달항아리', url: IMAGES.moonJar },
+          { label: '위빙 태피스트리', url: IMAGES.knitTapestry },
+          { label: '니트 & 크로셰', url: IMAGES.crochetCreatures },
+          { label: '3D 클레이', url: IMAGES.whimsical3D },
+          { label: '아틀리에 공방', url: IMAGES.hero }
+        ];
+
+        presetContainer.innerHTML = presets.map((p, idx) => `
+          <button type="button" onclick="selectRegPreset('${p.url}', this)" class="reg-preset-btn relative aspect-4/3 rounded-xl overflow-hidden border-2 transition-all cursor-pointer ${p.url === selectedRegPreset ? 'border-stone-900 ring-2 ring-stone-900/20' : 'border-stone-200 opacity-70'}">
+            <img src="${p.url}" alt="${p.label}" class="w-full h-full object-cover" />
+            <span class="absolute bottom-1 left-1 bg-stone-950/70 text-[10px] text-white px-1.5 py-0.5 rounded">${p.label}</span>
+          </button>
+        `).join('');
+
+        document.getElementById('modal-register').classList.remove('hidden');
+      }
+
+      function closeRegisterModal() {
+        document.getElementById('modal-register').classList.add('hidden');
+      }
+
+      function selectRegPreset(url, btn) {
+        selectedRegPreset = url;
+        document.getElementById('reg-custom-img').value = '';
+        document.querySelectorAll('.reg-preset-btn').forEach(b => {
+          b.className = 'reg-preset-btn relative aspect-4/3 rounded-xl overflow-hidden border-2 transition-all cursor-pointer border-stone-200 opacity-70';
+        });
+        btn.className = 'reg-preset-btn relative aspect-4/3 rounded-xl overflow-hidden border-2 transition-all cursor-pointer border-stone-900 ring-2 ring-stone-900/20 opacity-100';
+      }
+
+      function handleRegisterSubmit(event) {
+        event.preventDefault();
+        const name = document.getElementById('reg-name').value;
+        const handle = document.getElementById('reg-handle').value || `@${name.toLowerCase().replace(/\s+/g, '_')}`;
+        const category = document.getElementById('reg-category').value;
+        const location = document.getElementById('reg-location').value;
+        const bio = document.getElementById('reg-bio').value;
+        const artworkTitle = document.getElementById('reg-artwork-title').value;
+        const minPrice = Number(document.getElementById('reg-minprice').value) || 150000;
+        const turnaround = document.getElementById('reg-turnaround').value || '7 ~ 10일';
+        const tags = (document.getElementById('reg-tags').value || '핸드메이드, 아트').split(',').map(t => t.trim()).filter(Boolean);
+        const customUrl = document.getElementById('reg-custom-img').value.trim();
+        const finalImage = customUrl || selectedRegPreset;
+
+        const categoryLabels = {
+          illustration: '일러스트',
+          ceramics: '도자기',
+          knitting: '뜨개질/공예',
+          '3d_craft': '3D/기타'
+        };
+
+        const newArtistId = `artist-${Date.now()}`;
+        const newArtist = {
+          id: newArtistId,
+          name,
+          handle: handle.startsWith('@') ? handle : `@${handle}`,
+          avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
+          category,
+          categoryLabel: categoryLabels[category] || '공예',
+          location: location || '서울',
+          bio: bio || `${categoryLabels[category]} 분야에서 정성 어린 핸드메이드 작업을 선보이는 아티스트입니다.`,
+          experience: 'ArtisanHub 정식 등록 아티스트',
+          avgTurnaround: turnaround,
+          minPrice,
+          rating: 5.0,
+          reviewCount: 1,
+          tags,
+          gallery: [
+            { title: artworkTitle, image: finalImage, year: '2025', medium: `${categoryLabels[category]} 수작업` }
+          ],
+          priceGuide: [
+            { planName: '기본 커스텀 제작', price: minPrice, description: '1:1 맞춤 핸드크래프트 작업', turnaround, includes: ['1:1 상담', '과정 공유', '안전 배송'] }
+          ]
+        };
+
+        const newArtwork = {
+          id: `art-${Date.now()}`,
+          title: artworkTitle,
+          artistId: newArtistId,
+          artistName: name,
+          artistHandle: newArtist.handle,
+          artistAvatar: newArtist.avatar,
+          category,
+          categoryLabel: categoryLabels[category] || '공예',
+          image: finalImage,
+          likes: 1,
+          isLiked: false,
+          description: bio || `${name} 작가의 대표 작품입니다. 1:1 맞춤 의뢰가 가능합니다.`,
+          year: 2025,
+          minPrice,
+          turnaroundDays: turnaround,
+          usageType: '개인 소장 / 맞춤 외주'
+        };
+
+        artists.unshift(newArtist);
+        artworks.unshift(newArtwork);
+        saveStorage();
+
+        closeRegisterModal();
+        switchTab('feed');
+        showToast('success', '포트폴리오가 등록되었습니다!', `${name} 작가님의 작품이 피드에 게시되었습니다.`);
+      }
+
+      // Estimate Calculator
+      function setCalc(type, val, btn) {
+        calcState[type] = val;
+        
+        if (type === 'category') {
+          document.querySelectorAll('.calc-cat-btn').forEach(b => {
+            b.className = 'calc-cat-btn py-2 px-3 text-xs font-medium rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100';
+          });
+          btn.className = 'calc-cat-btn py-2 px-3 text-xs font-medium rounded-xl border bg-stone-900 text-stone-50 border-stone-900';
+        } else if (type === 'usage') {
+          document.querySelectorAll('.calc-usage-btn').forEach(b => {
+            b.className = 'calc-usage-btn p-3 text-left rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100';
+            const desc = b.querySelector('.text-[10px]');
+            if (desc) desc.className = 'text-[10px] text-stone-400 mt-0.5';
+          });
+          btn.className = 'calc-usage-btn p-3 text-left rounded-xl border bg-stone-900 text-stone-50 border-stone-900';
+          const activeDesc = btn.querySelector('.text-[10px]');
+          if (activeDesc) activeDesc.className = 'text-[10px] text-stone-300 mt-0.5';
+        } else if (type === 'speed') {
+          document.querySelectorAll('.calc-speed-btn').forEach(b => {
+            b.className = 'calc-speed-btn p-3 text-left rounded-xl border bg-stone-50 text-stone-700 border-stone-200 hover:bg-stone-100';
+            const desc = b.querySelector('.text-[10px]');
+            if (desc) desc.className = 'text-[10px] text-stone-400 mt-0.5';
+          });
+          btn.className = 'calc-speed-btn p-3 text-left rounded-xl border bg-stone-900 text-stone-50 border-stone-900';
+          const activeDesc = btn.querySelector('.text-[10px]');
+          if (activeDesc) activeDesc.className = 'text-[10px] text-stone-300 mt-0.5';
+        }
+
+        updateCalculator();
+      }
+
+      function updateCalculator() {
+        let baseMin = 100000;
+        let baseMax = 200000;
+
+        if (calcState.category === 'illustration') {
+          baseMin = 120000; baseMax = 250000;
+        } else if (calcState.category === 'ceramics') {
+          baseMin = 120000; baseMax = 320000;
+        } else if (calcState.category === 'knitting') {
+          baseMin = 85000; baseMax = 220000;
+        } else if (calcState.category === '3d_craft') {
+          baseMin = 200000; baseMax = 450000;
+        }
+
+        if (calcState.usage === 'commercial') {
+          baseMin = Math.round(baseMin * 2.2);
+          baseMax = Math.round(baseMax * 2.5);
+        } else if (calcState.usage === 'space') {
+          baseMin = Math.round(baseMin * 1.6);
+          baseMax = Math.round(baseMax * 1.8);
+        }
+
+        if (calcState.speed === 'express') {
+          baseMin = Math.round(baseMin * 1.3);
+          baseMax = Math.round(baseMax * 1.3);
+        }
+
+        const priceEl = document.getElementById('calc-result-price');
+        if (priceEl) {
+          priceEl.innerText = `₩${baseMin.toLocaleString()} ~ ₩${baseMax.toLocaleString()}`;
+        }
+
+        // Matched Artists
+        const matched = artists.filter(a => a.category === calcState.category).slice(0, 2);
+        const matchedContainer = document.getElementById('calc-matched-artists');
+        if (matchedContainer) {
+          matchedContainer.innerHTML = matched.map(a => `
+            <div class="bg-white p-3 rounded-xl border border-stone-200 flex items-center justify-between gap-3">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <img src="${a.avatar}" alt="${a.name}" class="w-9 h-9 rounded-full object-cover border border-stone-200 shrink-0" />
+                <div class="min-w-0">
+                  <div class="text-xs font-bold text-stone-900 truncate">${a.name}</div>
+                  <div class="text-[11px] text-stone-400 truncate">${a.categoryLabel} · ${a.avgTurnaround}</div>
+                </div>
+              </div>
+              <button onclick="openArtistModalForInquiry('${a.id}')" class="px-3 py-1.5 bg-stone-900 text-stone-50 text-xs font-semibold rounded-lg hover:bg-stone-800 transition-colors shrink-0 cursor-pointer">
+                의뢰하기
+              </button>
+            </div>
+          `).join('');
+        }
+      }
+
+      // Single File Download Feature
+      function downloadSingleFile() {
+        const htmlContent = document.documentElement.outerHTML;
+        const blob = new Blob([htmlContent], { type: 'text/html;charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'ArtisanHub_SingleFile.html';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+        showToast('success', '단일 HTML 파일 다운로드 시작', 'ArtisanHub_SingleFile.html 파일이 저장되었습니다.');
+      }
+
+      // Close modals on Escape key
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeArtistModal();
+          closeRegisterModal();
+        }
+      });
+
+      // Initialize App
+      document.addEventListener('DOMContentLoaded', () => {
+        renderArtworks();
+        updateBookmarksBadge();
+      });
+      // In case DOMContentLoaded already fired
+      if (document.readyState === 'complete' || document.readyState === 'interactive') {
+        renderArtworks();
+        updateBookmarksBadge();
+      }
+    </script>
+  
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true" style="visibility: visible !important;"></grammarly-desktop-integration></html>
